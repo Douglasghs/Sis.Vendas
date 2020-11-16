@@ -1,0 +1,19 @@
+-- /* Documentação/css.txt/ ref-001*/ 
+                              Definições gerais do lado direito e esquerdo
+
+-- /* Documentação/css.txt/ ref-002*/ 
+                              Referência ao campo superior do site
+
+-- /* Documentação/css.txt/ ref-003*/
+                               Referência aos botões de escolha de complementos 
+                                ex.: tomate, cebola, milho
+
+-- /* Documentação/css.txt/ ref-004*/
+                               Referência ao campo onde vai ser mostrado os valores da Data,hora, lucro e vendidos
+
+-- /* Documentação/css.txt/ ref-005*/
+                               Referência ao campo onde será mostrado o nome dos campos de hora, data, lucro e vendidos
+
+--  /* Documentação/css.txt/ ref-006*/
+                                Referência ao nome principal do site (Dr.lanches);
+                         

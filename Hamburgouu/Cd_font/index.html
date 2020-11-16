@@ -9,494 +9,728 @@
 </head>
 
 <body>
-    <div id="campo_geral">
-        <div id="campo_pedido">
-            <select name="lanches" id="campo_lache">
-                <option value="Pechincheiro Burguer"><strong>PECHINCHEIRO BURGUER - 5 R$ -</strong></option>
-                <option value="Lagilina Burguer"><strong>LAGILINA BURGUER - 7 R$ -</strong></option>
-                <option value="Narizinho Burguer"><strong>NARIZINHO BURGUER - 10 R$ -</strong></option>
-                <option value="Bucho Burguer"><strong>BUCHO BURGUER - 13 R$ -</strong></option>
-                <option value="Fofão Burguer"><strong>FOFÃO BURGUER - 15 R$ -</strong></option>
-                <option value="Meu Beiço Burguer"><strong>MEU BEIÇO  BURGUER - 17 R$ -</strong></option>
-                <option value="Explosão"><strong>EXPLOSÃO - 30 R$ -</strong></option>
-            </select>
+    <div id="Campo_superior">
+        <input type="text" class="campo_valor" readonly= true>
+        <p class="campo_name"><strong>Vendidos :</strong></p>
+        <input type="text" class="campo_valor" readonly= true>
+        <p class="campo_name"><strong>Lucro :</strong></p>
+        <div  class="campo_valor" id="tempo_data"></div>
+        <p class="campo_name"><strong>Data :</strong></p>
+        <div class="campo_valor" id="tempo_hora"></div>
+        <p class="campo_name"><strong>Hora :</strong></p>
 
-            <div class="ff01" onclick="es01()" id="es01">
-                <p class="p"><strong>Tomate</strong></p>
-                <div class="d"></div>
-            </div>
-            <div class="ff01" onclick="es02()" id="es02">
-                <p class="p"><strong>Cebola</strong></p>
-                <div class="d"></div>
-            </div>
-            <div class="ff01" onclick="es03()" id="es03">
-                <p class="p"><strong>Alface</strong></p>
-                <div class="d"></div>
-            </div>
-            <div class="ff01" onclick="es04()" id="es04">
-                <p class="p"><strong>Milho</strong></p>
-                <div class="d"></div>
-            </div>
-            <div class="ff01" onclick="es05()" id="es05">
-                <p class="p"><strong>Calabresa</strong></p>
-                <div class="d"></div>
-            </div>
-            <div class="ff01" onclick="es06()" id="es06">
-                <p class="p"><strong>Completo</strong></p>
-                <div class="d"></div>
-            </div>
+        <p id="nome_empresa"><strong>Dr.Lanches</strong></p>
 
-            <div class="campo_nome">
-                <div class="gg"><strong>Nome:</strong></div>
-                <input type="text" class="tt" placeholder="Nome do cliente aqui ..." id="nome">
-            </div>
-            <div class="campo_nome">
-                <div class="gg">Endereço:</div>
-                <input type="text" class="tt" placeholder="Endereço do cliente aqui ..." id="endereco">
-            </div>
-            <div id="quantidade">
-                <div id="quant_nome"><strong>Quantidade:</strong></div>
-                <input type="number" id="numero" placeholder="Nº.quantidade">
-            </div>
+    </div>
+    <div class="temp_gerais">
+        <select name="lanches" id="campo_lache">
+            <option value="Pechincheiro Burguer"><strong>PECHINCHEIRO BURGUER - 5 R$ -</strong></option>
+            <option value="Lagilina Burguer"><strong>LAGILINA BURGUER - 7 R$ -</strong></option>
+            <option value="Narizinho Burguer"><strong>NARIZINHO BURGUER - 10 R$ -</strong></option>
+            <option value="Bucho Burguer"><strong>BUCHO BURGUER - 13 R$ -</strong></option>
+            <option value="Fofão Burguer"><strong>FOFÃO BURGUER - 15 R$ -</strong></option>
+            <option value="Meu Beiço Burguer"><strong>MEU BEIÇO BURGUER - 17 R$ -</strong></option>
+            <option value="Explosão"><strong>EXPLOSÃO - 30 R$ -</strong></option>
+        </select>
 
-            <div id="botao">
-                <button type="button" class="bb" onclick="salvar()"><strong>Salvar pedido</strong></button>
-                <button type="button" class="bb" onclick="Limpar()"><strong>Limpar Campos</strong></button>
-            </div>
+        <div class="Bt_complementos" onclick="es01()" id="es01">
+            <p class="p"><strong>Tomate</strong></p>
+        </div>
+        <div class="Bt_complementos" onclick="es02()" id="es02">
+            <p class="p"><strong>Cebola</strong></p>
+        </div>
+        <div class="Bt_complementos" onclick="es03()" id="es03">
+            <p class="p"><strong>Alface</strong></p>
+        </div>
+        <div class="Bt_complementos" onclick="es04()" id="es04">
+            <p class="p"><strong>Milho</strong></p>
+        </div>
+        <div class="Bt_complementos" onclick="es05()" id="es05">
+            <p class="p"><strong>Calabresa</strong></p>
+        </div>
+        <div class="Bt_complementos" onclick="es06()" id="es06">
+            <p class="p"><strong>Completo</strong></p>
         </div>
 
-        <div id="recede_pedido">
-            <div id="grere01">
-                <div id="nome01"></div>               <div id="passarnome01"></div>
-                <div id="campo_hora01"></div>         <div id="hora01"></div>
-                <div id="pedido01"></div>             <div id="pedido_nome01"></div>
-                <div id="quantidade_nome01"></div>    <div id="quant01"></div>
-                <div id="campo_endereco01"></div>     <div id="endereco_digitado01"></div>
-                <div id="campo_complemento01"></div>  <div id="complemento01"></div>
-                
-                <button type="button" id="bt01" onclick="bt01()"></button>
-            </div>
-            <div id="grere02">
-                <div id="nome02"></div>               <div id="passarnome02"></div>
-                <div id="campo_hora02"></div>         <div id="hora02"></div>
-                <div id="pedido02"></div>             <div id="pedido_nome02"></div>
-                <div id="quantidade_nome02"></div>    <div id="quant02"></div>
-                <div id="campo_endereco02"></div>     <div id="endereco_digitado02"></div>
-                <div id="campo_complemento02"></div>  <div id="complemento02"></div>
-
-                <button type="button" id="bt02" onclick="bt02()"></button>
-            </div>
-            <div id="grere03">
-                <div id="nome03"></div>               <div id="passarnome03"></div>
-                <div id="campo_hora03"></div>         <div id="hora03"></div>
-                <div id="pedido03"></div>             <div id="pedido_nome03"></div>
-                <div id="quantidade_nome03"></div>    <div id="quant03"></div>
-                <div id="campo_endereco03"></div>     <div id="endereco_digitado03"></div>
-                <div id="campo_complemento03"></div>  <div id="complemento03"></div>
-
-                <button type="button" id="bt03" onclick="bt03()"></button>
-            </div>
-            <div id="grere04">
-                <div id="nome04"></div>               <div id="passarnome04"></div>
-                <div id="campo_hora04"></div>         <div id="hora04"></div>
-                <div id="pedido04"></div>             <div id="pedido_nome04"></div>
-                <div id="quantidade_nome04"></div>    <div id="quant04"></div>
-                <div id="campo_endereco04"></div>     <div id="endereco_digitado04"></div>
-                <div id="campo_complemento04"></div>  <div id="complemento04"></div>
-
-                <button type="button" id="bt04" onclick="bt04()"></button>
-            </div>
-            <div id="grere05">
-                <div id="nome05"></div>              <div id="passarnome05"></div>
-                <div id="campo_hora05"></div>        <div id="hora05"></div>
-                <div id="pedido05"></div>            <div id="pedido_nome05"></div>
-                <div id="quantidade_nome05"></div>   <div id="quant05"></div>
-                <div id="campo_endereco05"></div>    <div id="endereco_digitado05"></div>
-                <div id="campo_complemento05"></div> <div id="complemento05"></div>
-
-                <button type="button" id="bt05" onclick="bt05()"></button>
-            </div>
-            <div id="grere06">
-                <div id="nome06"></div>              <div id="passarnome06"></div>
-                <div id="campo_hora06"></div>        <div id="hora06"></div>
-                <div id="pedido06"></div>            <div id="pedido_nome06"></div>
-                <div id="quantidade_nome06"></div>   <div id="quant06"></div>
-                <div id="campo_endereco06"></div>    <div id="endereco_digitado06"></div>
-                <div id="campo_complemento06"></div> <div id="complemento06"></div>
-                
-                <button type="button" id="bt06" onclick="bt06()"></button>
-            </div>
-            <div id="grere07">
-                <div id="nome07"></div>              <div id="passarnome07"></div>
-                <div id="campo_hora07"></div>        <div id="hora07"></div>
-                <div id="pedido07"></div>            <div id="pedido_nome07"></div>
-                <div id="quantidade_nome07"></div>   <div id="quant07"></div>
-                <div id="campo_endereco07"></div>    <div id="endereco_digitado07"></div>
-                <div id="campo_complemento07"></div> <div id="complemento07"></div>
-                
-                <button type="button" id="bt07" onclick="bt07()"></button>
-            </div>
-            <div id="grere08">
-                <div id="nome08"></div>              <div id="passarnome08"></div>
-                <div id="campo_hora08"></div>        <div id="hora08"></div>
-                <div id="pedido08"></div>            <div id="pedido_nome08"></div>
-                <div id="quantidade_nome08"></div>   <div id="quant08"></div>
-                <div id="campo_endereco08"></div>    <div id="endereco_digitado08"></div>
-                <div id="campo_complemento08"></div> <div id="complemento08"></div>
-                
-                <button type="button" id="bt08" onclick="bt08()"></button>
-            </div>
-            <div id="grere09">
-                <div id="nome09"></div>              <div id="passarnome09"></div>
-                <div id="campo_hora09"></div>        <div id="hora09"></div>
-                <div id="pedido09"></div>            <div id="pedido_nome09"></div>
-                <div id="quantidade_nome09"></div>   <div id="quant09"></div>
-                <div id="campo_endereco09"></div>    <div id="endereco_digitado09"></div>
-                <div id="campo_complemento09"></div> <div id="complemento09"></div>
-
-               <button type="button" id="bt09" onclick="bt09()"></button>
-            </div>
-            <div id="grere10">
-                <div id="nome10"></div>              <div id="passarnome10"></div>
-                <div id="campo_hora10"></div>        <div id="hora10"></div>
-                <div id="pedido10"></div>            <div id="pedido_nome10"></div>
-                <div id="quantidade_nome10"></div>   <div id="quant10"></div>
-                <div id="campo_endereco10"></div>    <div id="endereco_digitado10"></div>
-                <div id="campo_complemento10"></div> <div id="complemento10"></div>
-                
-                <button type="button" id="bt10" onclick="bt10()"></button>
-            </div>
-            <div id="grere11">
-                <div id="nome11"></div>              <div id="passarnome11"></div>
-                <div id="campo_hora11"></div>        <div id="hora11"></div>
-                <div id="pedido11"></div>            <div id="pedido_nome11"></div>
-                <div id="quantidade_nome11"></div>   <div id="quant11"></div>
-                <div id="campo_endereco11"></div>    <div id="endereco_digitado11"></div>
-                <div id="campo_complemento11"></div> <div id="complemento11"></div>
-                
-                <button type="button" id="bt11" onclick="bt11()"></button>
-            </div>
-            <div id="grere12">
-                <div id="nome12"></div>              <div id="passarnome12"></div>
-                <div id="campo_hora12"></div>        <div id="hora12"></div>
-                <div id="pedido12"></div>            <div id="pedido_nome12"></div>
-                <div id="quantidade_nome12"></div>   <div id="quant12"></div>
-                <div id="campo_endereco12"></div>    <div id="endereco_digitado12"></div>
-                <div id="campo_complemento12"></div> <div id="complemento12"></div>
-                
-                <button type="button" id="bt12" onclick="bt12()"></button>
-            </div>
-            <div id="grere13">
-                <div id="nome13"></div>              <div id="passarnome13"></div>
-                <div id="campo_hora13"></div>        <div id="hora13"></div>
-                <div id="pedido13"></div>            <div id="pedido_nome13"></div>
-                <div id="quantidade_nome13"></div>   <div id="quant13"></div>
-                <div id="campo_endereco13"></div>    <div id="endereco_digitado13"></div>
-                <div id="campo_complemento13"></div> <div id="complemento13"></div>
-                
-                <button type="button" id="bt13" onclick="bt13()"></button>
-            </div>
-            <div id="grere14">
-                <div id="nome14"></div>              <div id="passarnome14"></div>
-                <div id="campo_hora14"></div>        <div id="hora14"></div>
-                <div id="pedido14"></div>            <div id="pedido_nome14"></div>
-                <div id="quantidade_nome14"></div>   <div id="quant14"></div>
-                <div id="campo_endereco14"></div>    <div id="endereco_digitado14"></div>
-                <div id="campo_complemento14"></div> <div id="complemento14"></div>
-                
-                <button type="button" id="bt14" onclick="bt14()"></button>
-            </div>
-            <div id="grere15">
-                <div id="nome15"></div>              <div id="passarnome15"></div>
-                <div id="campo_hora15"></div>        <div id="hora15"></div>
-                <div id="pedido15"></div>            <div id="pedido_nome15"></div>
-                <div id="quantidade_nome15"></div>   <div id="quant15"></div>
-                <div id="campo_endereco15"></div>    <div id="endereco_digitado15"></div>
-                <div id="campo_complemento15"></div> <div id="complemento15"></div>
-                
-                <button type="button" id="bt15" onclick="bt15()"></button>
-            </div>
-            <div id="grere16">
-                <div id="nome16"></div>              <div id="passarnome16"></div>
-                <div id="campo_hora16"></div>        <div id="hora16"></div>
-                <div id="pedido16"></div>            <div id="pedido_nome16"></div>
-                <div id="quantidade_nome16"></div>   <div id="quant16"></div>
-                <div id="campo_endereco16"></div>    <div id="endereco_digitado16"></div>
-                <div id="campo_complemento16"></div> <div id="complemento16"></div>
-                
-                <button type="button" id="bt16" onclick="bt16()"></button>
-
-            </div>
-            <div id="grere17">
-                <div id="nome17"></div>              <div id="passarnome17"></div>
-                <div id="campo_hora17"></div>        <div id="hora17"></div>
-                <div id="pedido17"></div>            <div id="pedido_nome17"></div>
-                <div id="quantidade_nome17"></div>   <div id="quant17"></div>
-                <div id="campo_endereco17"></div>    <div id="endereco_digitado17"></div>
-                <div id="campo_complemento17"></div> <div id="complemento17"></div>
-                
-                <button type="button" id="bt17" onclick="bt17()"></button>
-
-            </div>
-            <div id="grere18">
-                <div id="nome18"></div>              <div id="passarnome18"></div>
-                <div id="campo_hora18"></div>        <div id="hora18"></div>
-                <div id="pedido18"></div>            <div id="pedido_nome18"></div>
-                <div id="quantidade_nome18"></div>   <div id="quant18"></div>
-                <div id="campo_endereco18"></div>    <div id="endereco_digitado18"></div>
-                <div id="campo_complemento18"></div> <div id="complemento18"></div>
-                
-                <button type="button" id="bt18" onclick="bt18()"></button>
-
-            </div>
-            <div id="grere19">
-                <div id="nome19"></div>              <div id="passarnome19"></div>
-                <div id="campo_hora19"></div>        <div id="hora19"></div>
-                <div id="pedido19"></div>            <div id="pedido_nome19"></div>
-                <div id="quantidade_nome19"></div>   <div id="quant19"></div>
-                <div id="campo_endereco19"></div>    <div id="endereco_digitado19"></div>
-                <div id="campo_complemento19"></div> <div id="complemento19"></div>
-                
-                <button type="button" id="bt19" onclick="bt19()"></button>
-
-            </div>
-            <div id="grere20">
-                <div id="nome20"></div>              <div id="passarnome20"></div>
-                <div id="campo_hora20"></div>        <div id="hora20"></div>
-                <div id="pedido20"></div>            <div id="pedido_nome20"></div>
-                <div id="quantidade_nome20"></div>   <div id="quant20"></div>
-                <div id="campo_endereco20"></div>    <div id="endereco_digitado20"></div>
-                <div id="campo_complemento20"></div> <div id="complemento20"></div>
-                
-                <button type="button" id="bt20" onclick="bt20()"></button>
-
-            </div>
-            <div id="grere21">
-                <div id="nome21"></div>              <div id="passarnome21"></div>
-                <div id="campo_hora21"></div>        <div id="hora21"></div>
-                <div id="pedido21"></div>            <div id="pedido_nome21"></div>
-                <div id="quantidade_nome21"></div>   <div id="quant21"></div>
-                <div id="campo_endereco21"></div>    <div id="endereco_digitado21"></div>
-                <div id="campo_complemento21"></div> <div id="complemento21"></div>
-
-                <button type="button" id="bt21" onclick="bt21()"></button>
-
-            </div>
-            <div id="grere22">
-                <div id="nome22"></div>              <div id="passarnome22"></div>
-                <div id="campo_hora22"></div>        <div id="hora22"></div>
-                <div id="pedido22"></div>            <div id="pedido_nome22"></div>
-                <div id="quantidade_nome22"></div>   <div id="quant22"></div>
-                <div id="campo_endereco22"></div>    <div id="endereco_digitado22"></div>
-                <div id="campo_complemento22"></div> <div id="complemento22"></div>
-
-                <button type="button" id="bt22" onclick="bt22()"></button>
-
-            </div>
-            <div id="grere23">
-                <div id="nome23"></div>              <div id="passarnome23"></div>
-                <div id="campo_hora23"></div>        <div id="hora23"></div>
-                <div id="pedido23"></div>            <div id="pedido_nome23"></div>
-                <div id="quantidade_nome23"></div>   <div id="quant23"></div>
-                <div id="campo_endereco23"></div>    <div id="endereco_digitado23"></div>
-                <div id="campo_complemento23"></div> <div id="complemento23"></div>
-
-                <button type="button" id="bt23" onclick="bt23()"></button>
-
-            </div>
-            <div id="grere24">
-                 <div id="nome24"></div>              <div id="passarnome24"></div>
-                <div id="campo_hora24"></div>        <div id="hora24"></div>
-                <div id="pedido24"></div>            <div id="pedido_nome24"></div>
-                <div id="quantidade_nome24"></div>   <div id="quant24"></div>
-                <div id="campo_endereco24"></div>    <div id="endereco_digitado24"></div>
-                <div id="campo_complemento24"></div> <div id="complemento24"></div>
-
-                <button type="button" id="bt24" onclick="bt24()"></button>
-
-            </div>
-            <div id="grere25">
-                 <div id="nome25"></div>              <div id="passarnome25"></div>
-                <div id="campo_hora25"></div>        <div id="hora25"></div>
-                <div id="pedido25"></div>            <div id="pedido_nome25"></div>
-                <div id="quantidade_nome25"></div>   <div id="quant25"></div>
-                <div id="campo_endereco25"></div>    <div id="endereco_digitado25"></div>
-                <div id="campo_complemento25"></div> <div id="complemento25"></div>
-
-                <button type="button" id="bt25" onclick="bt25()"></button>
-
-            </div>
-            <div id="grere26">
-                <div id="nome26"></div>              <div id="passarnome26"></div>
-                <div id="campo_hora26"></div>        <div id="hora26"></div>
-                <div id="pedido26"></div>            <div id="pedido_nome26"></div>
-                <div id="quantidade_nome26"></div>   <div id="quant26"></div>
-                <div id="campo_endereco26"></div>    <div id="endereco_digitado26"></div>
-                <div id="campo_complemento26"></div> <div id="complemento26"></div>
-
-                <button type="button" id="bt26" onclick="bt26()"></button>
-
-            </div>
-            <div id="grere27">
-                <div id="nome27"></div>              <div id="passarnome27"></div>
-                <div id="campo_hora27"></div>        <div id="hora27"></div>
-                <div id="pedido27"></div>            <div id="pedido_nome27"></div>
-                <div id="quantidade_nome27"></div>   <div id="quant27"></div>
-                <div id="campo_endereco27"></div>    <div id="endereco_digitado27"></div>
-                <div id="campo_complemento27"></div> <div id="complemento27"></div>
-
-                <button type="button" id="bt27" onclick="bt27()"></button>
-
-            </div>
-            <div id="grere28">
-                <div id="nome28"></div>              <div id="passarnome28"></div>
-                <div id="campo_hora28"></div>        <div id="hora28"></div>
-                <div id="pedido28"></div>            <div id="pedido_nome28"></div>
-                <div id="quantidade_nome28"></div>   <div id="quant28"></div>
-                <div id="campo_endereco28"></div>    <div id="endereco_digitado28"></div>
-                <div id="campo_complemento28"></div> <div id="complemento28"></div>
-
-                <button type="button" id="bt28" onclick="bt28()"></button>
-
-            </div>
-            <div id="grere29">
-                <div id="nome29"></div>              <div id="passarnome29"></div>
-                <div id="campo_hora29"></div>        <div id="hora29"></div>
-                <div id="pedido29"></div>            <div id="pedido_nome29"></div>
-                <div id="quantidade_nome29"></div>   <div id="quant29"></div>
-                <div id="campo_endereco29"></div>    <div id="endereco_digitado29"></div>
-                <div id="campo_complemento29"></div> <div id="complemento29"></div>
-
-                <button type="button" id="bt29" onclick="bt29()"></button>
-
-            </div>
-            <div id="grere30">
-                <div id="nome30"></div>              <div id="passarnome30"></div>
-                <div id="campo_hora30"></div>        <div id="hora30"></div>
-                <div id="pedido30"></div>            <div id="pedido_nome30"></div>
-                <div id="quantidade_nome30"></div>   <div id="quant30"></div>
-                <div id="campo_endereco30"></div>    <div id="endereco_digitado30"></div>
-                <div id="campo_complemento30"></div> <div id="complemento30"></div>
-                         
-                <button type="button" id="bt30" onclick="bt30()"></button>
-
-            </div>
-            <div id="grere31">
-                <div id="nome31"></div>              <div id="passarnome31"></div>
-                <div id="campo_hora31"></div>        <div id="hora31"></div>
-                <div id="pedido31"></div>            <div id="pedido_nome31"></div>
-                <div id="quantidade_nome31"></div>   <div id="quant31"></div>
-                <div id="campo_endereco31"></div>    <div id="endereco_digitado31"></div>
-                <div id="campo_complemento31"></div> <div id="complemento31"></div>
-                         
-                <button type="button" id="bt31" onclick="bt31()"></button>
-            </div>
-            <div id="grere32">
-                <div id="nome32"></div>              <div id="passarnome32"></div>
-                <div id="campo_hora32"></div>        <div id="hora32"></div>
-                <div id="pedido32"></div>            <div id="pedido_nome32"></div>
-                <div id="quantidade_nome32"></div>   <div id="quant32"></div>
-                <div id="campo_endereco32"></div>    <div id="endereco_digitado32"></div>
-                <div id="campo_complemento32"></div> <div id="complemento32"></div>
-                         
-                <button type="button" id="bt32" onclick="bt32()"></button>
-            </div>
-            <div id="grere33">
-                <div id="nome33"></div>              <div id="passarnome33"></div>
-                <div id="campo_hora33"></div>        <div id="hora33"></div>
-                <div id="pedido33"></div>            <div id="pedido_nome33"></div>
-                <div id="quantidade_nome33"></div>   <div id="quant33"></div>
-                <div id="campo_endereco33"></div>    <div id="endereco_digitado33"></div>
-                <div id="campo_complemento33"></div> <div id="complemento33"></div>
-                         
-                <button type="button" id="bt33" onclick="bt33()"></button>
-            </div>
-            <div id="grere34">
-                <div id="nome34"></div>              <div id="passarnome34"></div>
-                <div id="campo_hora34"></div>        <div id="hora34"></div>
-                <div id="pedido34"></div>            <div id="pedido_nome34"></div>
-                <div id="quantidade_nome34"></div>   <div id="quant34"></div>
-                <div id="campo_endereco34"></div>    <div id="endereco_digitado34"></div>
-                <div id="campo_complemento34"></div> <div id="complemento34"></div>
-                         
-                <button type="button" id="bt34" onclick="bt34()"></button>
-            </div>
-            <div id="grere35">
-                <div id="nome35"></div>              <div id="passarnome35"></div>
-                <div id="campo_hora35"></div>        <div id="hora35"></div>
-                <div id="pedido35"></div>            <div id="pedido_nome35"></div>
-                <div id="quantidade_nome35"></div>   <div id="quant35"></div>
-                <div id="campo_endereco35"></div>    <div id="endereco_digitado35"></div>
-                <div id="campo_complemento35"></div> <div id="complemento35"></div>
-                         
-                <button type="button" id="bt35" onclick="bt35()"></button>
-            </div>
-            <div id="grere36">
-                <div id="nome36"></div>              <div id="passarnome36"></div>
-                <div id="campo_hora36"></div>        <div id="hora36"></div>
-                <div id="pedido36"></div>            <div id="pedido_nome36"></div>
-                <div id="quantidade_nome36"></div>   <div id="quant36"></div>
-                <div id="campo_endereco36"></div>    <div id="endereco_digitado36"></div>
-                <div id="campo_complemento36"></div> <div id="complemento36"></div>
-                         
-                <button type="button" id="bt36" onclick="bt36()"></button>
-            </div>
-            <div id="grere37">
-                <div id="nome37"></div>              <div id="passarnome37"></div>
-                <div id="campo_hora37"></div>        <div id="hora37"></div>
-                <div id="pedido37"></div>            <div id="pedido_nome37"></div>
-                <div id="quantidade_nome37"></div>   <div id="quant37"></div>
-                <div id="campo_endereco37"></div>    <div id="endereco_digitado37"></div>
-                <div id="campo_complemento37"></div> <div id="complemento37"></div>
-                         
-                <button type="button" id="bt37" onclick="bt37()"></button>
-            </div>
-            <div id="grere38">
-                <div id="nome38"></div>              <div id="passarnome38"></div>
-                <div id="campo_hora38"></div>        <div id="hora38"></div>
-                <div id="pedido38"></div>            <div id="pedido_nome38"></div>
-                <div id="quantidade_nome38"></div>   <div id="quant38"></div>
-                <div id="campo_endereco38"></div>    <div id="endereco_digitado38"></div>
-                <div id="campo_complemento38"></div> <div id="complemento38"></div>
-                         
-                <button type="button" id="bt38" onclick="bt38()"></button>
-            </div>
-            <div id="grere39">
-                <div id="nome39"></div>              <div id="passarnome39"></div>
-                <div id="campo_hora39"></div>        <div id="hora39"></div>
-                <div id="pedido39"></div>            <div id="pedido_nome39"></div>
-                <div id="quantidade_nome39"></div>   <div id="quant39"></div>
-                <div id="campo_endereco39"></div>    <div id="endereco_digitado39"></div>
-                <div id="campo_complemento39"></div> <div id="complemento39"></div>
-                         
-                <button type="button" id="bt39" onclick="bt39()"></button>
-            </div>
-            <div id="grere40">
-                <div id="nome40"></div>               <div id="passarnome40"></div>
-                <div id="campo_hora40"></div>         <div id="hora40"></div> 
-                <div id="pedido40"></div>             <div id="pedido_nome40"></div>
-                <div id="quantidade_nome40"></div>    <div id="quant40"></div>
-                <div id="campo_endereco40"></div>     <div id="endereco_digitado40"></div>
-                <div id="campo_complemento40"></div>  <div id="complemento40"></div>
-
-                <button type="button" id="bt40" onclick="bt40()"></button>
-            </div>
-
+        <div class="campo_nome">
+            <div class="gg"><strong>Nome:</strong></div>
+            <input type="text" class="tt" placeholder="Nome do cliente aqui ..." id="nome">
+        </div>
+        <div class="campo_nome">
+            <div class="gg">Endereço:</div>
+            <input type="text" class="tt" placeholder="Endereço do cliente aqui ..." id="endereco">
+        </div>
+        <div id="quantidade">
+            <div id="quant_nome"><strong>Quantidade:</strong></div>
+            <input type="number" id="numero" placeholder="Nº.quantidade">
         </div>
 
-        <div id="campo_saldo">
-            <div class="quant">
-                <div class="nome_vendidos"><strong>Vendidos</strong></div>
-                <input type="number" class="painel_valor" readonly= "true" id="vendidos">
-            </div>
-            <div class="quant">
-                <div class="nome_vendidos"><strong>Lucro-R$</strong></div>
-                <input type="number" class="painel_valor" readonly="true" id="lucro">
-            </div>
+        <div id="botao">
+            <button type="button" class="bb" onclick="salvar()"><strong>Salvar pedido</strong></button>
+            <button type="button" class="bb" onclick="Limpar()"><strong>Limpar Campos</strong></button>
         </div>
     </div>
 
-        <script src="script.js"></script>
+    <div class="temp_gerais">
+        <div id="grere01">
+            <div id="nome01"></div>
+            <div id="passarnome01"></div>
+            <div id="campo_hora01"></div>
+            <div id="hora01"></div>
+            <div id="pedido01"></div>
+            <div id="pedido_nome01"></div>
+            <div id="quantidade_nome01"></div>
+            <div id="quant01"></div>
+            <div id="campo_endereco01"></div>
+            <div id="endereco_digitado01"></div>
+            <div id="campo_complemento01"></div>
+            <div id="complemento01"></div>
+
+            <button type="button" id="bt01" onclick="bt01()"></button>
+        </div>
+        <div id="grere02">
+            <div id="nome02"></div>
+            <div id="passarnome02"></div>
+            <div id="campo_hora02"></div>
+            <div id="hora02"></div>
+            <div id="pedido02"></div>
+            <div id="pedido_nome02"></div>
+            <div id="quantidade_nome02"></div>
+            <div id="quant02"></div>
+            <div id="campo_endereco02"></div>
+            <div id="endereco_digitado02"></div>
+            <div id="campo_complemento02"></div>
+            <div id="complemento02"></div>
+
+            <button type="button" id="bt02" onclick="bt02()"></button>
+        </div>
+        <div id="grere03">
+            <div id="nome03"></div>
+            <div id="passarnome03"></div>
+            <div id="campo_hora03"></div>
+            <div id="hora03"></div>
+            <div id="pedido03"></div>
+            <div id="pedido_nome03"></div>
+            <div id="quantidade_nome03"></div>
+            <div id="quant03"></div>
+            <div id="campo_endereco03"></div>
+            <div id="endereco_digitado03"></div>
+            <div id="campo_complemento03"></div>
+            <div id="complemento03"></div>
+
+            <button type="button" id="bt03" onclick="bt03()"></button>
+        </div>
+        <div id="grere04">
+            <div id="nome04"></div>
+            <div id="passarnome04"></div>
+            <div id="campo_hora04"></div>
+            <div id="hora04"></div>
+            <div id="pedido04"></div>
+            <div id="pedido_nome04"></div>
+            <div id="quantidade_nome04"></div>
+            <div id="quant04"></div>
+            <div id="campo_endereco04"></div>
+            <div id="endereco_digitado04"></div>
+            <div id="campo_complemento04"></div>
+            <div id="complemento04"></div>
+
+            <button type="button" id="bt04" onclick="bt04()"></button>
+        </div>
+        <div id="grere05">
+            <div id="nome05"></div>
+            <div id="passarnome05"></div>
+            <div id="campo_hora05"></div>
+            <div id="hora05"></div>
+            <div id="pedido05"></div>
+            <div id="pedido_nome05"></div>
+            <div id="quantidade_nome05"></div>
+            <div id="quant05"></div>
+            <div id="campo_endereco05"></div>
+            <div id="endereco_digitado05"></div>
+            <div id="campo_complemento05"></div>
+            <div id="complemento05"></div>
+
+            <button type="button" id="bt05" onclick="bt05()"></button>
+        </div>
+        <div id="grere06">
+            <div id="nome06"></div>
+            <div id="passarnome06"></div>
+            <div id="campo_hora06"></div>
+            <div id="hora06"></div>
+            <div id="pedido06"></div>
+            <div id="pedido_nome06"></div>
+            <div id="quantidade_nome06"></div>
+            <div id="quant06"></div>
+            <div id="campo_endereco06"></div>
+            <div id="endereco_digitado06"></div>
+            <div id="campo_complemento06"></div>
+            <div id="complemento06"></div>
+
+            <button type="button" id="bt06" onclick="bt06()"></button>
+        </div>
+        <div id="grere07">
+            <div id="nome07"></div>
+            <div id="passarnome07"></div>
+            <div id="campo_hora07"></div>
+            <div id="hora07"></div>
+            <div id="pedido07"></div>
+            <div id="pedido_nome07"></div>
+            <div id="quantidade_nome07"></div>
+            <div id="quant07"></div>
+            <div id="campo_endereco07"></div>
+            <div id="endereco_digitado07"></div>
+            <div id="campo_complemento07"></div>
+            <div id="complemento07"></div>
+
+            <button type="button" id="bt07" onclick="bt07()"></button>
+        </div>
+        <div id="grere08">
+            <div id="nome08"></div>
+            <div id="passarnome08"></div>
+            <div id="campo_hora08"></div>
+            <div id="hora08"></div>
+            <div id="pedido08"></div>
+            <div id="pedido_nome08"></div>
+            <div id="quantidade_nome08"></div>
+            <div id="quant08"></div>
+            <div id="campo_endereco08"></div>
+            <div id="endereco_digitado08"></div>
+            <div id="campo_complemento08"></div>
+            <div id="complemento08"></div>
+
+            <button type="button" id="bt08" onclick="bt08()"></button>
+        </div>
+        <div id="grere09">
+            <div id="nome09"></div>
+            <div id="passarnome09"></div>
+            <div id="campo_hora09"></div>
+            <div id="hora09"></div>
+            <div id="pedido09"></div>
+            <div id="pedido_nome09"></div>
+            <div id="quantidade_nome09"></div>
+            <div id="quant09"></div>
+            <div id="campo_endereco09"></div>
+            <div id="endereco_digitado09"></div>
+            <div id="campo_complemento09"></div>
+            <div id="complemento09"></div>
+
+            <button type="button" id="bt09" onclick="bt09()"></button>
+        </div>
+        <div id="grere10">
+            <div id="nome10"></div>
+            <div id="passarnome10"></div>
+            <div id="campo_hora10"></div>
+            <div id="hora10"></div>
+            <div id="pedido10"></div>
+            <div id="pedido_nome10"></div>
+            <div id="quantidade_nome10"></div>
+            <div id="quant10"></div>
+            <div id="campo_endereco10"></div>
+            <div id="endereco_digitado10"></div>
+            <div id="campo_complemento10"></div>
+            <div id="complemento10"></div>
+
+            <button type="button" id="bt10" onclick="bt10()"></button>
+        </div>
+        <div id="grere11">
+            <div id="nome11"></div>
+            <div id="passarnome11"></div>
+            <div id="campo_hora11"></div>
+            <div id="hora11"></div>
+            <div id="pedido11"></div>
+            <div id="pedido_nome11"></div>
+            <div id="quantidade_nome11"></div>
+            <div id="quant11"></div>
+            <div id="campo_endereco11"></div>
+            <div id="endereco_digitado11"></div>
+            <div id="campo_complemento11"></div>
+            <div id="complemento11"></div>
+
+            <button type="button" id="bt11" onclick="bt11()"></button>
+        </div>
+        <div id="grere12">
+            <div id="nome12"></div>
+            <div id="passarnome12"></div>
+            <div id="campo_hora12"></div>
+            <div id="hora12"></div>
+            <div id="pedido12"></div>
+            <div id="pedido_nome12"></div>
+            <div id="quantidade_nome12"></div>
+            <div id="quant12"></div>
+            <div id="campo_endereco12"></div>
+            <div id="endereco_digitado12"></div>
+            <div id="campo_complemento12"></div>
+            <div id="complemento12"></div>
+
+            <button type="button" id="bt12" onclick="bt12()"></button>
+        </div>
+        <div id="grere13">
+            <div id="nome13"></div>
+            <div id="passarnome13"></div>
+            <div id="campo_hora13"></div>
+            <div id="hora13"></div>
+            <div id="pedido13"></div>
+            <div id="pedido_nome13"></div>
+            <div id="quantidade_nome13"></div>
+            <div id="quant13"></div>
+            <div id="campo_endereco13"></div>
+            <div id="endereco_digitado13"></div>
+            <div id="campo_complemento13"></div>
+            <div id="complemento13"></div>
+
+            <button type="button" id="bt13" onclick="bt13()"></button>
+        </div>
+        <div id="grere14">
+            <div id="nome14"></div>
+            <div id="passarnome14"></div>
+            <div id="campo_hora14"></div>
+            <div id="hora14"></div>
+            <div id="pedido14"></div>
+            <div id="pedido_nome14"></div>
+            <div id="quantidade_nome14"></div>
+            <div id="quant14"></div>
+            <div id="campo_endereco14"></div>
+            <div id="endereco_digitado14"></div>
+            <div id="campo_complemento14"></div>
+            <div id="complemento14"></div>
+
+            <button type="button" id="bt14" onclick="bt14()"></button>
+        </div>
+        <div id="grere15">
+            <div id="nome15"></div>
+            <div id="passarnome15"></div>
+            <div id="campo_hora15"></div>
+            <div id="hora15"></div>
+            <div id="pedido15"></div>
+            <div id="pedido_nome15"></div>
+            <div id="quantidade_nome15"></div>
+            <div id="quant15"></div>
+            <div id="campo_endereco15"></div>
+            <div id="endereco_digitado15"></div>
+            <div id="campo_complemento15"></div>
+            <div id="complemento15"></div>
+
+            <button type="button" id="bt15" onclick="bt15()"></button>
+        </div>
+        <div id="grere16">
+            <div id="nome16"></div>
+            <div id="passarnome16"></div>
+            <div id="campo_hora16"></div>
+            <div id="hora16"></div>
+            <div id="pedido16"></div>
+            <div id="pedido_nome16"></div>
+            <div id="quantidade_nome16"></div>
+            <div id="quant16"></div>
+            <div id="campo_endereco16"></div>
+            <div id="endereco_digitado16"></div>
+            <div id="campo_complemento16"></div>
+            <div id="complemento16"></div>
+
+            <button type="button" id="bt16" onclick="bt16()"></button>
+
+        </div>
+        <div id="grere17">
+            <div id="nome17"></div>
+            <div id="passarnome17"></div>
+            <div id="campo_hora17"></div>
+            <div id="hora17"></div>
+            <div id="pedido17"></div>
+            <div id="pedido_nome17"></div>
+            <div id="quantidade_nome17"></div>
+            <div id="quant17"></div>
+            <div id="campo_endereco17"></div>
+            <div id="endereco_digitado17"></div>
+            <div id="campo_complemento17"></div>
+            <div id="complemento17"></div>
+
+            <button type="button" id="bt17" onclick="bt17()"></button>
+
+        </div>
+        <div id="grere18">
+            <div id="nome18"></div>
+            <div id="passarnome18"></div>
+            <div id="campo_hora18"></div>
+            <div id="hora18"></div>
+            <div id="pedido18"></div>
+            <div id="pedido_nome18"></div>
+            <div id="quantidade_nome18"></div>
+            <div id="quant18"></div>
+            <div id="campo_endereco18"></div>
+            <div id="endereco_digitado18"></div>
+            <div id="campo_complemento18"></div>
+            <div id="complemento18"></div>
+
+            <button type="button" id="bt18" onclick="bt18()"></button>
+
+        </div>
+        <div id="grere19">
+            <div id="nome19"></div>
+            <div id="passarnome19"></div>
+            <div id="campo_hora19"></div>
+            <div id="hora19"></div>
+            <div id="pedido19"></div>
+            <div id="pedido_nome19"></div>
+            <div id="quantidade_nome19"></div>
+            <div id="quant19"></div>
+            <div id="campo_endereco19"></div>
+            <div id="endereco_digitado19"></div>
+            <div id="campo_complemento19"></div>
+            <div id="complemento19"></div>
+
+            <button type="button" id="bt19" onclick="bt19()"></button>
+
+        </div>
+        <div id="grere20">
+            <div id="nome20"></div>
+            <div id="passarnome20"></div>
+            <div id="campo_hora20"></div>
+            <div id="hora20"></div>
+            <div id="pedido20"></div>
+            <div id="pedido_nome20"></div>
+            <div id="quantidade_nome20"></div>
+            <div id="quant20"></div>
+            <div id="campo_endereco20"></div>
+            <div id="endereco_digitado20"></div>
+            <div id="campo_complemento20"></div>
+            <div id="complemento20"></div>
+
+            <button type="button" id="bt20" onclick="bt20()"></button>
+
+        </div>
+        <div id="grere21">
+            <div id="nome21"></div>
+            <div id="passarnome21"></div>
+            <div id="campo_hora21"></div>
+            <div id="hora21"></div>
+            <div id="pedido21"></div>
+            <div id="pedido_nome21"></div>
+            <div id="quantidade_nome21"></div>
+            <div id="quant21"></div>
+            <div id="campo_endereco21"></div>
+            <div id="endereco_digitado21"></div>
+            <div id="campo_complemento21"></div>
+            <div id="complemento21"></div>
+
+            <button type="button" id="bt21" onclick="bt21()"></button>
+
+        </div>
+        <div id="grere22">
+            <div id="nome22"></div>
+            <div id="passarnome22"></div>
+            <div id="campo_hora22"></div>
+            <div id="hora22"></div>
+            <div id="pedido22"></div>
+            <div id="pedido_nome22"></div>
+            <div id="quantidade_nome22"></div>
+            <div id="quant22"></div>
+            <div id="campo_endereco22"></div>
+            <div id="endereco_digitado22"></div>
+            <div id="campo_complemento22"></div>
+            <div id="complemento22"></div>
+
+            <button type="button" id="bt22" onclick="bt22()"></button>
+
+        </div>
+        <div id="grere23">
+            <div id="nome23"></div>
+            <div id="passarnome23"></div>
+            <div id="campo_hora23"></div>
+            <div id="hora23"></div>
+            <div id="pedido23"></div>
+            <div id="pedido_nome23"></div>
+            <div id="quantidade_nome23"></div>
+            <div id="quant23"></div>
+            <div id="campo_endereco23"></div>
+            <div id="endereco_digitado23"></div>
+            <div id="campo_complemento23"></div>
+            <div id="complemento23"></div>
+
+            <button type="button" id="bt23" onclick="bt23()"></button>
+
+        </div>
+        <div id="grere24">
+            <div id="nome24"></div>
+            <div id="passarnome24"></div>
+            <div id="campo_hora24"></div>
+            <div id="hora24"></div>
+            <div id="pedido24"></div>
+            <div id="pedido_nome24"></div>
+            <div id="quantidade_nome24"></div>
+            <div id="quant24"></div>
+            <div id="campo_endereco24"></div>
+            <div id="endereco_digitado24"></div>
+            <div id="campo_complemento24"></div>
+            <div id="complemento24"></div>
+
+            <button type="button" id="bt24" onclick="bt24()"></button>
+
+        </div>
+        <div id="grere25">
+            <div id="nome25"></div>
+            <div id="passarnome25"></div>
+            <div id="campo_hora25"></div>
+            <div id="hora25"></div>
+            <div id="pedido25"></div>
+            <div id="pedido_nome25"></div>
+            <div id="quantidade_nome25"></div>
+            <div id="quant25"></div>
+            <div id="campo_endereco25"></div>
+            <div id="endereco_digitado25"></div>
+            <div id="campo_complemento25"></div>
+            <div id="complemento25"></div>
+
+            <button type="button" id="bt25" onclick="bt25()"></button>
+
+        </div>
+        <div id="grere26">
+            <div id="nome26"></div>
+            <div id="passarnome26"></div>
+            <div id="campo_hora26"></div>
+            <div id="hora26"></div>
+            <div id="pedido26"></div>
+            <div id="pedido_nome26"></div>
+            <div id="quantidade_nome26"></div>
+            <div id="quant26"></div>
+            <div id="campo_endereco26"></div>
+            <div id="endereco_digitado26"></div>
+            <div id="campo_complemento26"></div>
+            <div id="complemento26"></div>
+
+            <button type="button" id="bt26" onclick="bt26()"></button>
+
+        </div>
+        <div id="grere27">
+            <div id="nome27"></div>
+            <div id="passarnome27"></div>
+            <div id="campo_hora27"></div>
+            <div id="hora27"></div>
+            <div id="pedido27"></div>
+            <div id="pedido_nome27"></div>
+            <div id="quantidade_nome27"></div>
+            <div id="quant27"></div>
+            <div id="campo_endereco27"></div>
+            <div id="endereco_digitado27"></div>
+            <div id="campo_complemento27"></div>
+            <div id="complemento27"></div>
+
+            <button type="button" id="bt27" onclick="bt27()"></button>
+
+        </div>
+        <div id="grere28">
+            <div id="nome28"></div>
+            <div id="passarnome28"></div>
+            <div id="campo_hora28"></div>
+            <div id="hora28"></div>
+            <div id="pedido28"></div>
+            <div id="pedido_nome28"></div>
+            <div id="quantidade_nome28"></div>
+            <div id="quant28"></div>
+            <div id="campo_endereco28"></div>
+            <div id="endereco_digitado28"></div>
+            <div id="campo_complemento28"></div>
+            <div id="complemento28"></div>
+
+            <button type="button" id="bt28" onclick="bt28()"></button>
+
+        </div>
+        <div id="grere29">
+            <div id="nome29"></div>
+            <div id="passarnome29"></div>
+            <div id="campo_hora29"></div>
+            <div id="hora29"></div>
+            <div id="pedido29"></div>
+            <div id="pedido_nome29"></div>
+            <div id="quantidade_nome29"></div>
+            <div id="quant29"></div>
+            <div id="campo_endereco29"></div>
+            <div id="endereco_digitado29"></div>
+            <div id="campo_complemento29"></div>
+            <div id="complemento29"></div>
+
+            <button type="button" id="bt29" onclick="bt29()"></button>
+
+        </div>
+        <div id="grere30">
+            <div id="nome30"></div>
+            <div id="passarnome30"></div>
+            <div id="campo_hora30"></div>
+            <div id="hora30"></div>
+            <div id="pedido30"></div>
+            <div id="pedido_nome30"></div>
+            <div id="quantidade_nome30"></div>
+            <div id="quant30"></div>
+            <div id="campo_endereco30"></div>
+            <div id="endereco_digitado30"></div>
+            <div id="campo_complemento30"></div>
+            <div id="complemento30"></div>
+
+            <button type="button" id="bt30" onclick="bt30()"></button>
+
+        </div>
+        <div id="grere31">
+            <div id="nome31"></div>
+            <div id="passarnome31"></div>
+            <div id="campo_hora31"></div>
+            <div id="hora31"></div>
+            <div id="pedido31"></div>
+            <div id="pedido_nome31"></div>
+            <div id="quantidade_nome31"></div>
+            <div id="quant31"></div>
+            <div id="campo_endereco31"></div>
+            <div id="endereco_digitado31"></div>
+            <div id="campo_complemento31"></div>
+            <div id="complemento31"></div>
+
+            <button type="button" id="bt31" onclick="bt31()"></button>
+        </div>
+        <div id="grere32">
+            <div id="nome32"></div>
+            <div id="passarnome32"></div>
+            <div id="campo_hora32"></div>
+            <div id="hora32"></div>
+            <div id="pedido32"></div>
+            <div id="pedido_nome32"></div>
+            <div id="quantidade_nome32"></div>
+            <div id="quant32"></div>
+            <div id="campo_endereco32"></div>
+            <div id="endereco_digitado32"></div>
+            <div id="campo_complemento32"></div>
+            <div id="complemento32"></div>
+
+            <button type="button" id="bt32" onclick="bt32()"></button>
+        </div>
+        <div id="grere33">
+            <div id="nome33"></div>
+            <div id="passarnome33"></div>
+            <div id="campo_hora33"></div>
+            <div id="hora33"></div>
+            <div id="pedido33"></div>
+            <div id="pedido_nome33"></div>
+            <div id="quantidade_nome33"></div>
+            <div id="quant33"></div>
+            <div id="campo_endereco33"></div>
+            <div id="endereco_digitado33"></div>
+            <div id="campo_complemento33"></div>
+            <div id="complemento33"></div>
+
+            <button type="button" id="bt33" onclick="bt33()"></button>
+        </div>
+        <div id="grere34">
+            <div id="nome34"></div>
+            <div id="passarnome34"></div>
+            <div id="campo_hora34"></div>
+            <div id="hora34"></div>
+            <div id="pedido34"></div>
+            <div id="pedido_nome34"></div>
+            <div id="quantidade_nome34"></div>
+            <div id="quant34"></div>
+            <div id="campo_endereco34"></div>
+            <div id="endereco_digitado34"></div>
+            <div id="campo_complemento34"></div>
+            <div id="complemento34"></div>
+
+            <button type="button" id="bt34" onclick="bt34()"></button>
+        </div>
+        <div id="grere35">
+            <div id="nome35"></div>
+            <div id="passarnome35"></div>
+            <div id="campo_hora35"></div>
+            <div id="hora35"></div>
+            <div id="pedido35"></div>
+            <div id="pedido_nome35"></div>
+            <div id="quantidade_nome35"></div>
+            <div id="quant35"></div>
+            <div id="campo_endereco35"></div>
+            <div id="endereco_digitado35"></div>
+            <div id="campo_complemento35"></div>
+            <div id="complemento35"></div>
+
+            <button type="button" id="bt35" onclick="bt35()"></button>
+        </div>
+        <div id="grere36">
+            <div id="nome36"></div>
+            <div id="passarnome36"></div>
+            <div id="campo_hora36"></div>
+            <div id="hora36"></div>
+            <div id="pedido36"></div>
+            <div id="pedido_nome36"></div>
+            <div id="quantidade_nome36"></div>
+            <div id="quant36"></div>
+            <div id="campo_endereco36"></div>
+            <div id="endereco_digitado36"></div>
+            <div id="campo_complemento36"></div>
+            <div id="complemento36"></div>
+
+            <button type="button" id="bt36" onclick="bt36()"></button>
+        </div>
+        <div id="grere37">
+            <div id="nome37"></div>
+            <div id="passarnome37"></div>
+            <div id="campo_hora37"></div>
+            <div id="hora37"></div>
+            <div id="pedido37"></div>
+            <div id="pedido_nome37"></div>
+            <div id="quantidade_nome37"></div>
+            <div id="quant37"></div>
+            <div id="campo_endereco37"></div>
+            <div id="endereco_digitado37"></div>
+            <div id="campo_complemento37"></div>
+            <div id="complemento37"></div>
+
+            <button type="button" id="bt37" onclick="bt37()"></button>
+        </div>
+        <div id="grere38">
+            <div id="nome38"></div>
+            <div id="passarnome38"></div>
+            <div id="campo_hora38"></div>
+            <div id="hora38"></div>
+            <div id="pedido38"></div>
+            <div id="pedido_nome38"></div>
+            <div id="quantidade_nome38"></div>
+            <div id="quant38"></div>
+            <div id="campo_endereco38"></div>
+            <div id="endereco_digitado38"></div>
+            <div id="campo_complemento38"></div>
+            <div id="complemento38"></div>
+
+            <button type="button" id="bt38" onclick="bt38()"></button>
+        </div>
+        <div id="grere39">
+            <div id="nome39"></div>
+            <div id="passarnome39"></div>
+            <div id="campo_hora39"></div>
+            <div id="hora39"></div>
+            <div id="pedido39"></div>
+            <div id="pedido_nome39"></div>
+            <div id="quantidade_nome39"></div>
+            <div id="quant39"></div>
+            <div id="campo_endereco39"></div>
+            <div id="endereco_digitado39"></div>
+            <div id="campo_complemento39"></div>
+            <div id="complemento39"></div>
+
+            <button type="button" id="bt39" onclick="bt39()"></button>
+        </div>
+        <div id="grere40">
+            <div id="nome40"></div>
+            <div id="passarnome40"></div>
+            <div id="campo_hora40"></div>
+            <div id="hora40"></div>
+            <div id="pedido40"></div>
+            <div id="pedido_nome40"></div>
+            <div id="quantidade_nome40"></div>
+            <div id="quant40"></div>
+            <div id="campo_endereco40"></div>
+            <div id="endereco_digitado40"></div>
+            <div id="campo_complemento40"></div>
+            <div id="complemento40"></div>
+
+            <button type="button" id="bt40" onclick="bt40()"></button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

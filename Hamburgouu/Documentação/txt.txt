@@ -1,5 +1,0 @@
-                               Documentação do projeto 1001 Burguer
-
-
-* 01     campo geral = ------- 
-                      Campo onde é chamado a div que mostra os  pedidos realizados no dia de venda
