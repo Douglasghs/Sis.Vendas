@@ -1,0 +1,215 @@
+body{
+    background-color: #000000;
+}
+#campo_geral{
+    width: 100%;
+    height: 605px;
+    background-image: url('../Img/dia-do-hamburguer-freepik.jpg');
+}
+
+#campo_pedido{
+    float: left;
+    width: 60%;
+    height: 100%;
+    border: 1px solid rgba(255, 0, 0, 0);
+}
+
+#campo_lache{
+    float: left;
+    width: 90%;
+    height: 4%;
+    margin-left: 5%;
+    margin-top: 1%;
+    background-color:rgba(169, 169, 169, 0.945);
+    border-radius: 10px;
+    color: black;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.596);
+
+    font-size: 10pt;
+    font-weight: bold;
+    font-family: Arial;
+    font-style: normal;
+}
+
+.ff01{
+    float: left;
+    width: 25%;
+    height: 25%;
+    margin-top: 5%;
+    margin-left: 6%;
+    border: 1px solid blanchedalmond;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px  rgba(0, 0, 0, 0.596);
+    background-color: rgba(169, 169, 169, 0.945);
+}
+
+.p{
+    float: left;
+    width: 90%;
+    height: 30%;
+    margin-left: 5%;
+
+    font-size: 20pt;
+    color: white;
+    text-align: center;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
+}
+
+.d{
+    float: left;
+    width: 40%;
+    height: 30%;
+    margin-left: 30%;
+    border-radius: 10px;
+    border: 1px solid darkgray;
+}
+
+.op{
+    width: 20%;
+    height: 25%;
+    color: #000000;
+}
+
+.campo_nome{
+    float: left;
+    width: 100%;
+    height: 5%;
+    margin-top: 4%;
+}
+
+.gg{
+    float: left;
+    width: 20%;
+    height: 100%;
+    
+    font-size: 16pt;
+    text-align: center;
+    font-weight: bold;
+    font-style: normal;
+    font-family: Arial;
+    color: white;
+}
+
+.tt{
+    float: left;
+    width: 74%;
+    height: 70%;
+    border-radius: 10px;
+    border: 1px solid rgba(169, 169, 169, 0.945);
+    background-color:rgba(169, 169, 169, 0.945);
+    color: white;
+    box-shadow:  1px 1px 1px 1px  rgba(0, 0, 0, 0.596);
+}
+
+#botao{
+    float: left;
+    width: 55%;
+    height: 7%;
+}
+
+.bb{
+    float: right;
+    width: 30%;
+    height: 70%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    border-radius: 10px;
+    border: 1px solid gray;
+    box-shadow:  1px 1px 1px 1px  rgba(0, 0, 0, 0.596);
+
+    background-color: rgba(169, 169, 169, 0.945);
+    color: black;
+
+}
+
+#recede_pedido{
+    overflow: auto;
+    float: left;
+    width: 39%;
+    height: 70%;
+    margin-top: 1%;
+    border-radius: 10px;
+    background-color:rgba(169, 169, 169, 0.945);
+    box-shadow:  1px 1px 1px 1px  rgba(0, 0, 0, 0.596);
+}
+
+
+#campo_saldo{
+    float: left;
+    width: 39%;
+    height: 25%;
+    margin-top: 1%;
+    border-radius: 10px;
+    background-color:  rgba(169, 169, 169, 0.945);
+    box-shadow:  1px 1px 1px 1px  rgba(0, 0, 0, 0.596);
+}
+
+#quantidade{
+    float: left;
+    width: 35%;
+    height: 5%;
+    margin-top: 3%;
+}
+
+#quant_nome{
+    float: left;
+    width: 57%;
+    height: 98%;
+
+    font-size: 16pt;
+    text-align: center;
+    font-weight: bold;
+    font-style: normal;
+    font-family: Arial;
+    color: white;
+}
+
+#numero{
+    float: left;
+    width: 36%;
+    height: 70%;
+    border-radius: 10px;
+    border: 1px solid rgba(169, 169, 169, 0.945);
+    background-color:rgba(169, 169, 169, 0.945);
+    color: white;
+    box-shadow:  1px 1px 1px 1px  rgba(0, 0, 0, 0.596);
+}
+
+.quant{
+    float: left;
+    width: 49%;
+    height: 98%;
+    margin-left: 0.5%;
+}
+
+.nome_vendidos{
+    float: left;
+    width: 40%;
+    height: 20%;
+    margin-left: 30%;
+    margin-top: 10%;
+
+    text-align: center;
+    font-size: 17pt;
+    font-weight: bold;
+    font-family: Arial;
+    font-style: normal;
+    color: white;
+}
+
+.painel_valor{
+    float: left;
+    width: 50%;
+    height: 30%;
+    border: 1px solid white;
+    margin-left: 25%;
+    border-radius: 10px;
+
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+    font-family: Arial;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.877);
+}
