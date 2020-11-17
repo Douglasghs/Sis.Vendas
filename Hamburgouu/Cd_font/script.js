@@ -460,3 +460,23 @@ function es06(){
 
     }
 }
+
+//-------------------------------------------------------------- função limpar todo os dados do formulário
+
+function Limpar(){
+
+    let grupo = ['es01','es02','es03','es04','es05','es06'];   // inicio da primeira instancia
+
+    for( let i=0; i<6;i++){
+        revesamentoComplemento[i] = 0;
+        window.document.getElementById(grupo[i]).style.backgroundColor = "transparent"
+    }
+
+    tomate = ""; cebola = ""; alface = ""; milho = ""; calabresa = ""; completo = "";  // fim da primeira instancia
+
+    let grupo_formulario = ['nome', 'endereco', 'compl_endereco', 'numero'];
+
+    for( let i=0; i<4; i++){
+        window.document.getElementById(grupo_formulario[i]).value = "";
+    }
+}
