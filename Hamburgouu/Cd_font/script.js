@@ -19,25 +19,26 @@ function salvar() {
 
                 criar.style.display = 'block';
                 criar.style.float = "left";
-                criar.style.width = "508px";
-                criar.style.height = "100px";
+                criar.style.width = "99.5%";
+                criar.style.height = "17%";
                 criar.style.borderRadius = "10px";
-                criar.style.marginTop = "2px";
+                criar.style.marginTop = "0.3%";
                 criar.style.background = "orange";
                 criar.style.boxShadow = "1px 1px 1px 1px black";
 
                 let Nome = window.document.getElementById(nome_div[i]);   // div escrito nome
 
                 Nome.style.float = "left";
-                Nome.style.width = "60px";
-                Nome.style.height = "20px";
+                Nome.style.border = "1px solid red";
+                Nome.style.width = "10%";
+                Nome.style.height = "20%";
                 Nome.innerHTML = "Cliente: ";
                 Nome.style.fontSize = "12pt";
                 Nome.style.fontFamily = "Arial";
                 Nome.style.fontStyle = "Normal";
                 Nome.style.fontWeight = "Bold";
-                Nome.style.marginLeft = "3px";
-                Nome.style.marginTop = "3px";
+                Nome.style.marginLeft = "0.5%";
+                Nome.style.marginTop = "0.5%";
                 Nome.style.color = "red";
 
                 let cliente = window.document.getElementById('nome').value;    // div com o nome do cliente
@@ -45,23 +46,25 @@ function salvar() {
                 passar_tela.innerHTML = cliente;
 
                 passar_tela.style.float = "left";
-                passar_tela.style.width = "200px";
-                passar_tela.style.height = "20px";
-                passar_tela.style.marginTop = "3px";
+                passar_tela.style.border = "1px solid red";
+                passar_tela.style.width = "50%";
+                passar_tela.style.height = "20%";
+                passar_tela.style.marginTop = "0.5%";
                 passar_tela.style.fontSize = "12pt";
                 passar_tela.style.fontFamily = "Arial";
                 passar_tela.style.fontStyle = "Normal";
                 passar_tela.style.fontWeight = "Bold";
-                passar_tela.style.marginLeft = "2px";
+                passar_tela.style.marginLeft = "0.4%";
 
                 let campo_hora01 = window.document.getElementById(nome_hora[i]); // nome hora
 
                 campo_hora01.style.float = "left";
-                campo_hora01.style.width = "50px";
-                campo_hora01.style.height = "20px";
+                campo_hora01.style.border = "1px solid green";
+                campo_hora01.style.width = "10%";
+                campo_hora01.style.height = "20%";
                 campo_hora01.style.fontWeight = "Bold";
-                campo_hora01.style.marginLeft = "110px";
-                campo_hora01.style.marginTop = "3px";
+                campo_hora01.style.marginLeft = "2%";
+                campo_hora01.style.marginTop = "0.5%";
                 campo_hora01.innerHTML = "Hora:";
                 campo_hora01.style.fontSize = "12pt";
                 campo_hora01.style.fontFamily = "Arial";
@@ -72,10 +75,11 @@ function salvar() {
                 hora.innerHTML = new Date().getHours() + ":" + new Date().getMinutes();
 
                 hora.style.float = "left";
-                hora.style.width = "50px";
-                hora.style.height = "20px";
-                hora.style.marginLeft = "3px";
-                hora.style.marginTop = "3px";
+                hora.style.border = "1px solid green";
+                hora.style.width = "20%";
+                hora.style.height = "20%";
+                hora.style.marginLeft = "0.5%";
+                hora.style.marginTop = "0.5%";
                 hora.style.fontSize = "12pt";
                 hora.style.fontFamily = "Arial";
                 hora.style.fontStyle = "Normal";
@@ -84,43 +88,47 @@ function salvar() {
                 let pedido_fixo = window.document.getElementById(pedido[i]);        // nome pedido 
 
                 pedido_fixo.style.float = "left";
-                pedido_fixo.style.width = "60px";
-                pedido_fixo.style.height = "20px";
+                pedido_fixo.style.border = "1px solid blue";
+                pedido_fixo.style.width = "10%";
+                pedido_fixo.style.height = "20%";
                 pedido_fixo.innerHTML = "Pedido: ";
                 pedido_fixo.style.fontSize = "12pt";
                 pedido_fixo.style.fontFamily = "Arial";
                 pedido_fixo.style.fontStyle = "Normal";
                 pedido_fixo.style.fontWeight = "Bold";
-                pedido_fixo.style.marginLeft = "3px";
-                pedido_fixo.style.marginTop = "3px";
+                pedido_fixo.style.marginLeft = "0.5%";
+                pedido_fixo.style.marginTop = "0.5%";
                 pedido_fixo.style.color = "red";
 
                 let pedido_nome = window.document.getElementById(pedido_selec[i]);         // pedido selecionado
                 let lache = window.document.getElementById('campo_lache');
                 pedido_nome.innerHTML = lache.options[lache.selectedIndex].value;
 
-                pedido_nome.style.width = "230px";
-                pedido_nome.style.height = "20px";
+                pedido_nome.style.width = "40%";
+                pedido_nome.style.border = "1px solid blue";
+                pedido_nome.style.height = "20%";
                 pedido_nome.style.float = "left";
                 pedido_nome.style.color = "blue";
                 pedido_nome.style.fontSize = "12pt";
                 pedido_nome.style.fontFamily = "Arial";
                 pedido_nome.style.fontStyle = "Normal";
                 pedido_nome.style.fontWeight = "Bold";
-                pedido_nome.style.marginTop = "3px";
-                pedido_nome.style.marginLeft = "2px";
+                pedido_nome.style.marginTop = "0.5%";
+                pedido_nome.style.marginLeft = "0.5%";
 
                 let quantidade = window.document.getElementById(nome_quantidade[i])  // nome quantidade
 
                 quantidade.style.float = "left";
-                quantidade.style.width = "97px";
-                quantidade.style.height = "20px";
+                quantidade.style.border = "1px solid gray";
+                quantidade.style.width = "15%";
+                quantidade.style.height = "20%";
                 quantidade.innerHTML = "Quantidade: ";
                 quantidade.style.fontSize = "12pt";
                 quantidade.style.fontFamily = "Arial";
                 quantidade.style.fontStyle = "Normal";
                 quantidade.style.fontWeight = "Bold";
-                quantidade.style.marginTop = "3px";
+                quantidade.style.marginTop = "0.5%";
+                quantidade.style.marginLeft = "2%";
                 quantidade.style.color = "red";
 
                 let quant = window.document.getElementById(quant_hambur[i]);      // quantidade de hamburduer
@@ -128,29 +136,32 @@ function salvar() {
                 quant.innerHTML = quant_pedido + " Unidades";
                 soma.push(window.document.getElementById('numero').value);
 
-                quant.style.width = "100px";
-                quant.style.height = "20px";
+                quant.style.width = "20%";
+                quant.style.border = "1px solid gray";
+                quant.style.height = "20%";
                 quant.style.float = "left";
                 quant.style.color = "black";
                 quant.style.fontSize = "12pt";
                 quant.style.fontFamily = "Arial";
                 quant.style.fontStyle = "Normal";
                 quant.style.fontWeight = "Bold";
-                quant.style.marginTop = "3px";
+                quant.style.marginTop = "0.5%";
+                quant.style.marginLeft = "0.5%";
 
 
                 let endereco = window.document.getElementById(nome_endereco[i]);    // nome endereço
 
-                endereco.style.width = "50px";
-                endereco.style.height = "20px";
+                endereco.style.width = "13%";
+                endereco.style.border = "1px solid black";
+                endereco.style.height = "20%";
                 endereco.innerHTML = "Endereço: ";
                 endereco.style.color = "red";
                 endereco.style.fontSize = "12pt";
                 endereco.style.fontFamily = "Arial";
                 endereco.style.fontStyle = "Normal";
                 endereco.style.fontWeight = "Bold";
-                endereco.style.marginLeft = "3px";
-                endereco.style.marginTop = "3px";
+                endereco.style.marginLeft = "0.5%";
+                endereco.style.marginTop = "0.5%";
                 endereco.style.float = "left";
 
                 let endereco_digitado = window.document.getElementById(endereco_cliente[i]);    // endereço do cliente
@@ -158,33 +169,36 @@ function salvar() {
                 endereco_digitado.innerHTML = pegar_endereco;
 
                 endereco_digitado.style.float = "left";
-                endereco_digitado.style.width = "400px";
-                endereco_digitado.style.height = "20px";
+                endereco_digitado.style.border = "1px solid black";
+                endereco_digitado.style.width = "50%";
+                endereco_digitado.style.height = "20%";
                 endereco_digitado.style.color = "black";
                 endereco_digitado.style.fontSize = "12pt";
                 endereco_digitado.style.fontFamily = "Arial";
                 endereco_digitado.style.fontStyle = "Normal";
                 endereco_digitado.style.fontWeight = "Bold";
-                endereco_digitado.style.marginTop = "3px";
-                endereco_digitado.style.marginLeft = "34px";
+                endereco_digitado.style.marginTop = "0.5%";
+                endereco_digitado.style.marginLeft = "0.5%";
 
                 let campo_complemento = window.document.getElementById(nome_complemento[i]);   // nome complemento
 
-                campo_complemento.style.width = "50px";
-                campo_complemento.style.height = "20px";
+                campo_complemento.style.width = "17%";
+                campo_complemento.style.border = "1px solid white";
+                campo_complemento.style.height = "20%";
                 campo_complemento.innerHTML = "Complemento: ";
                 campo_complemento.style.color = "red";
                 campo_complemento.style.fontSize = "12pt";
                 campo_complemento.style.fontFamily = "Arial";
                 campo_complemento.style.fontStyle = "Normal";
                 campo_complemento.style.fontWeight = "Bold";
-                campo_complemento.style.marginLeft = "3px";
-                campo_complemento.style.marginTop = "3px";
+                campo_complemento.style.marginLeft = "2%";
+                campo_complemento.style.marginTop = "0.5%";
                 campo_complemento.style.float = "left";
 
                 complemento = window.document.getElementById(complemento_certo[i]);    // complemento
 
                 complemento.style.float = "left";
+                complemento.style.border = "1px solid white";
                 complemento.style.width = "300px";
                 complemento.style.height = "20px";
                 complemento.style.color = "black";
