@@ -9,20 +9,23 @@
 </head>
 
 <body>
-    <div id="Campo_superior">
+    <div id="Campo_superior">     <!-- Documentação\html\ ref--001 -->
         <input type="text" class="campo_valor" readonly= true>
         <p class="campo_name"><strong>Vendidos :</strong></p>
+              
         <input type="text" class="campo_valor" readonly= true>
         <p class="campo_name"><strong>Lucro :</strong></p>
+
         <div  class="campo_valor" id="tempo_data"></div>
         <p class="campo_name"><strong>Data :</strong></p>
+
         <div class="campo_valor" id="tempo_hora"></div>
         <p class="campo_name"><strong>Hora :</strong></p>
 
         <p id="nome_empresa"><strong>Dr.Lanches</strong></p>
 
     </div>
-    <div class="temp_gerais">
+    <div class="temp_gerais">   <!-- Documentação\html\ ref--002 -->
         <select name="lanches" id="campo_lache">
             <option value="Pechincheiro Burguer"><strong>PECHINCHEIRO BURGUER - 5 R$ -</strong></option>
             <option value="Lagilina Burguer"><strong>LAGILINA BURGUER - 7 R$ -</strong></option>
@@ -33,32 +36,36 @@
             <option value="Explosão"><strong>EXPLOSÃO - 30 R$ -</strong></option>
         </select>
 
-        <div class="Bt_complementos" onclick="es01()" id="es01">
-            <p class="p"><strong>Tomate</strong></p>
+        <div class="Bt_complementos" onclick="es01()" id="es01">  <!-- grupo de botões -->
+            <p class="nome_complemento"><strong>Tomate</strong></p>
         </div>
-        <div class="Bt_complementos" onclick="es02()" id="es02">
-            <p class="p"><strong>Cebola</strong></p>
+        <div class="Bt_complementos" onclick="es02()" id="es02">  <!-- "" -->
+            <p class="nome_complemento"><strong>Cebola</strong></p>
         </div>
-        <div class="Bt_complementos" onclick="es03()" id="es03">
-            <p class="p"><strong>Alface</strong></p>
+        <div class="Bt_complementos" onclick="es03()" id="es03">   <!-- "" -->
+            <p class="nome_complemento"><strong>Alface</strong></p>
         </div>
-        <div class="Bt_complementos" onclick="es04()" id="es04">
-            <p class="p"><strong>Milho</strong></p>
+        <div class="Bt_complementos" onclick="es04()" id="es04">   <!-- "" -->
+            <p class="nome_complemento"><strong>Milho</strong></p>
         </div>
-        <div class="Bt_complementos" onclick="es05()" id="es05">
-            <p class="p"><strong>Calabresa</strong></p>
+        <div class="Bt_complementos" onclick="es05()" id="es05">   <!-- "" -->
+            <p class="nome_complemento"><strong>Calabresa</strong></p>
         </div>
-        <div class="Bt_complementos" onclick="es06()" id="es06">
-            <p class="p"><strong>Completo</strong></p>
+        <div class="Bt_complementos" onclick="es06()" id="es06">   <!-- "" -->
+            <p class="nome_complemento"><strong>Completo</strong></p>
         </div>
 
         <div class="campo_nome">
-            <div class="gg"><strong>Nome:</strong></div>
-            <input type="text" class="tt" placeholder="Nome do cliente aqui ..." id="nome">
+            <div class="divi_nome_g"><strong>Cliente:</strong></div>
+            <input type="text" class="imputavel" placeholder="Nome do cliente aqui ..." id="nome">
         </div>
         <div class="campo_nome">
-            <div class="gg">Endereço:</div>
-            <input type="text" class="tt" placeholder="Endereço do cliente aqui ..." id="endereco">
+            <div class="divi_nome_g">Endereço:</div>
+            <input type="text" class="imputavel" placeholder="Endereço do cliente aqui ..." id="endereco">
+        </div>
+        <div class="campo_nome">
+            <div class="divi_nome_g">Com.Endereço:</div>
+            <input type="text" placeholder="Endereço do cliente aqui ..." id="compl_endereco">
         </div>
         <div id="quantidade">
             <div id="quant_nome"><strong>Quantidade:</strong></div>
@@ -66,12 +73,12 @@
         </div>
 
         <div id="botao">
-            <button type="button" class="bb" onclick="salvar()"><strong>Salvar pedido</strong></button>
-            <button type="button" class="bb" onclick="Limpar()"><strong>Limpar Campos</strong></button>
+            <button type="button" class="Carac_bts" onclick="salvar()"><strong>Salvar pedido</strong></button>
+            <button type="button" class="Carac_bts" onclick="Limpar()"><strong>Limpar Campos</strong></button>
         </div>
     </div>
 
-    <div class="temp_gerais">
+    <div class="temp_gerais">    <!-- Documentação\html\ ref--003 -->
         <div id="grere01">
             <div id="nome01"></div>
             <div id="passarnome01"></div>
