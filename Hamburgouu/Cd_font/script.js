@@ -1,16 +1,16 @@
 
 // -----------------------------------------------------------------------------------   Definindo data e hora 
 
-function Data_hora(){
+function Data_hora() {
     window.document.getElementById('tempo_hora').innerHTML = new Date().getHours() + ":" + new Date().getMinutes() + ":" +
-                                                              new Date().getSeconds();
+        new Date().getSeconds();
 
     window.document.getElementById('tempo_data').innerHTML = new Date().getDate() + "/" + (new Date().getMonth() + 1) + "/" +
-                                                              new Date().getFullYear();
+        new Date().getFullYear();
 }
 setInterval(Data_hora, 1000);
 
-
+// ------------------------------------------------------------------------------ enlace da fila de pedido
 function salvar() {
     for (let i = 0; i < 40; i++) {
         if (painel[i] == 0) {
@@ -20,7 +20,7 @@ function salvar() {
                 criar.style.display = 'block';
                 criar.style.float = "left";
                 criar.style.width = "99.5%";
-                criar.style.height = "17%";
+                criar.style.height = "18%";
                 criar.style.borderRadius = "10px";
                 criar.style.marginTop = "0.3%";
                 criar.style.background = "orange";
@@ -29,7 +29,6 @@ function salvar() {
                 let Nome = window.document.getElementById(nome_div[i]);   // div escrito nome
 
                 Nome.style.float = "left";
-                Nome.style.border = "1px solid red";
                 Nome.style.width = "10%";
                 Nome.style.height = "20%";
                 Nome.innerHTML = "Cliente: ";
@@ -46,7 +45,6 @@ function salvar() {
                 passar_tela.innerHTML = cliente;
 
                 passar_tela.style.float = "left";
-                passar_tela.style.border = "1px solid red";
                 passar_tela.style.width = "50%";
                 passar_tela.style.height = "20%";
                 passar_tela.style.marginTop = "0.5%";
@@ -59,7 +57,6 @@ function salvar() {
                 let campo_hora01 = window.document.getElementById(nome_hora[i]); // nome hora
 
                 campo_hora01.style.float = "left";
-                campo_hora01.style.border = "1px solid green";
                 campo_hora01.style.width = "10%";
                 campo_hora01.style.height = "20%";
                 campo_hora01.style.fontWeight = "Bold";
@@ -75,7 +72,6 @@ function salvar() {
                 hora.innerHTML = new Date().getHours() + ":" + new Date().getMinutes();
 
                 hora.style.float = "left";
-                hora.style.border = "1px solid green";
                 hora.style.width = "20%";
                 hora.style.height = "20%";
                 hora.style.marginLeft = "0.5%";
@@ -87,8 +83,7 @@ function salvar() {
 
                 let pedido_fixo = window.document.getElementById(pedido[i]);        // nome pedido 
 
-                pedido_fixo.style.float = "left";
-                pedido_fixo.style.border = "1px solid blue";
+                pedido_fixo.style.float = "left";;
                 pedido_fixo.style.width = "10%";
                 pedido_fixo.style.height = "20%";
                 pedido_fixo.innerHTML = "Pedido: ";
@@ -105,7 +100,6 @@ function salvar() {
                 pedido_nome.innerHTML = lache.options[lache.selectedIndex].value;
 
                 pedido_nome.style.width = "40%";
-                pedido_nome.style.border = "1px solid blue";
                 pedido_nome.style.height = "20%";
                 pedido_nome.style.float = "left";
                 pedido_nome.style.color = "blue";
@@ -119,7 +113,6 @@ function salvar() {
                 let quantidade = window.document.getElementById(nome_quantidade[i])  // nome quantidade
 
                 quantidade.style.float = "left";
-                quantidade.style.border = "1px solid gray";
                 quantidade.style.width = "15%";
                 quantidade.style.height = "20%";
                 quantidade.innerHTML = "Quantidade: ";
@@ -137,7 +130,6 @@ function salvar() {
                 soma.push(window.document.getElementById('numero').value);
 
                 quant.style.width = "20%";
-                quant.style.border = "1px solid gray";
                 quant.style.height = "20%";
                 quant.style.float = "left";
                 quant.style.color = "black";
@@ -152,7 +144,6 @@ function salvar() {
                 let endereco = window.document.getElementById(nome_endereco[i]);    // nome endereço
 
                 endereco.style.width = "13%";
-                endereco.style.border = "1px solid black";
                 endereco.style.height = "20%";
                 endereco.innerHTML = "Endereço: ";
                 endereco.style.color = "red";
@@ -169,7 +160,6 @@ function salvar() {
                 endereco_digitado.innerHTML = pegar_endereco;
 
                 endereco_digitado.style.float = "left";
-                endereco_digitado.style.border = "1px solid black";
                 endereco_digitado.style.width = "50%";
                 endereco_digitado.style.height = "20%";
                 endereco_digitado.style.color = "black";
@@ -180,10 +170,37 @@ function salvar() {
                 endereco_digitado.style.marginTop = "0.5%";
                 endereco_digitado.style.marginLeft = "0.5%";
 
+                let n_c_endereco = window.document.getElementById(nome_compl_endereco[i]);
+
+                n_c_endereco.style.width = "20%";
+                n_c_endereco.style.height = "20%";
+                n_c_endereco.style.float = "left";
+                n_c_endereco.innerHTML = "Comp.Endereço:";
+                n_c_endereco.style.color = "red";
+                n_c_endereco.style.marginLeft = "1%";
+                n_c_endereco.style.marginTop = "0.5%";
+                n_c_endereco.style.fontSize = "11pt";
+                n_c_endereco.style.fontFamily = "Arial";
+                n_c_endereco.style.fontStyle = "Normal";
+                n_c_endereco.style.fontWeight = "Bold";
+
+                let c_c_endereco = window.document.getElementById(c_compl_endereco[i]);
+                let pegar_comp_endereco = window.document.getElementById('compl_endereco').value;
+                c_c_endereco.innerHTML = pegar_comp_endereco;
+
+                c_c_endereco.style.float = "left";
+                c_c_endereco.style.width = "12%";
+                c_c_endereco.style.height = "20%";
+                c_c_endereco.style.marginTop = "0.5%";
+                c_c_endereco.style.marginLeft = "0.5%";
+                c_c_endereco.style.fontSize = "11pt";
+                c_c_endereco.style.fontFamily = "Arial";
+                c_c_endereco.style.fontStyle = "Normal";
+                c_c_endereco.style.fontWeight = "Bold";
+
                 let campo_complemento = window.document.getElementById(nome_complemento[i]);   // nome complemento
 
                 campo_complemento.style.width = "17%";
-                campo_complemento.style.border = "1px solid white";
                 campo_complemento.style.height = "20%";
                 campo_complemento.innerHTML = "Complemento: ";
                 campo_complemento.style.color = "red";
@@ -191,38 +208,41 @@ function salvar() {
                 campo_complemento.style.fontFamily = "Arial";
                 campo_complemento.style.fontStyle = "Normal";
                 campo_complemento.style.fontWeight = "Bold";
-                campo_complemento.style.marginLeft = "2%";
+                campo_complemento.style.marginLeft = "0.5%";
                 campo_complemento.style.marginTop = "0.5%";
                 campo_complemento.style.float = "left";
 
-                complemento = window.document.getElementById(complemento_certo[i]);    // complemento
+                let complemento = window.document.getElementById(complemento_certo[i]);    // complemento
 
                 complemento.style.float = "left";
-                complemento.style.border = "1px solid white";
-                complemento.style.width = "300px";
-                complemento.style.height = "20px";
+                complemento.style.width = "60%";
+                complemento.style.height = "20%";
                 complemento.style.color = "black";
                 complemento.style.fontSize = "12pt";
                 complemento.style.fontFamily = "Arial";
                 complemento.style.fontStyle = "Normal";
                 complemento.style.fontWeight = "Bold";
-                complemento.style.marginTop = "3px";
-                complemento.style.marginLeft = "70px";
+                complemento.style.marginTop = "0.5%";
+                complemento.style.marginLeft = "0.5%";
+
+                
 
                 let botao = window.document.getElementById(click[i]);
 
-                botao.style.width = "60px";
-                botao.style.height = "20px";
+                botao.style.width = "15%";
+                botao.style.height = "20%";
                 botao.style.float = "left";
-                botao.innerHTML = "Fechar";
+                botao.innerHTML = "Retirar";
                 botao.style.color = "black";
                 botao.style.fontSize = "10pt";
                 botao.style.fontFamily = "Arial";
                 botao.style.fontStyle = "Normal";
                 botao.style.fontWeight = "Bold";
+                botao.style.marginLeft = "4%";
+                botao.style.marginTop = "0.5%";
 
                 painel[i] = 1;
-               
+
                 break;
             }
             else if (window.document.getElementById('nome').value == "" || window.document.getElementById('numero').value == "") {
@@ -312,6 +332,24 @@ let endereco_cliente = ['endereco_digitado01', 'endereco_digitado02', 'endereco_
     'endereco_digitado26', 'endereco_digitado27', 'endereco_digitado28', 'endereco_digitado29', 'endereco_digitado30',
     'endereco_digitado31', 'endereco_digitado32', 'endereco_digitado33', 'endereco_digitado34', 'endereco_digitado35', 'endereco_digitado36',
     'endereco_digitado37', 'endereco_digitado38', 'endereco_digitado39', 'endereco_digitado40'];
+
+let nome_compl_endereco = ['compl_endereco01', 'compl_endereco02', 'compl_endereco03', 'compl_endereco04', 'compl_endereco05',
+    'compl_endereco06', 'compl_endereco07', 'compl_endereco08', 'compl_endereco09', 'compl_endereco10',
+    'compl_endereco11', 'compl_endereco12', 'compl_endereco13', 'compl_endereco14', 'compl_endereco15',
+    'compl_endereco16', 'compl_endereco17', 'compl_endereco18', 'compl_endereco19', 'compl_endereco20',
+    'compl_endereco21', 'compl_endereco22', 'compl_endereco23', 'compl_endereco24', 'compl_endereco25',
+    'compl_endereco26', 'compl_endereco27', 'compl_endereco28', 'compl_endereco29', 'compl_endereco30',
+    'compl_endereco31', 'compl_endereco32', 'compl_endereco33', 'compl_endereco34', 'compl_endereco35',
+    'compl_endereco36', 'compl_endereco37', 'compl_endereco38', 'compl_endereco39', 'compl_endereco40']
+
+let c_compl_endereco = ['camp_compl_endereco01', 'camp_compl_endereco02', 'camp_compl_endereco03', 'camp_compl_endereco04', 'camp_compl_endereco05',
+    'camp_compl_endereco06','camp_compl_endereco07','camp_compl_endereco08','camp_compl_endereco09','camp_compl_endereco10',
+    'camp_compl_endereco11','camp_compl_endereco12','camp_compl_endereco13','camp_compl_endereco14','camp_compl_endereco15',
+    'camp_compl_endereco16','camp_compl_endereco17','camp_compl_endereco18','camp_compl_endereco19','camp_compl_endereco20',
+    'camp_compl_endereco21','camp_compl_endereco22','camp_compl_endereco23','camp_compl_endereco24','camp_compl_endereco25',
+    'camp_compl_endereco26','camp_compl_endereco27','camp_compl_endereco28','camp_compl_endereco29','camp_compl_endereco30',
+    'camp_compl_endereco31','camp_compl_endereco32','camp_compl_endereco33','camp_compl_endereco34','camp_compl_endereco35',
+    'camp_compl_endereco36','camp_compl_endereco37','camp_compl_endereco38','camp_compl_endereco39','camp_compl_endereco40']
 
 let nome_complemento = ['campo_complemento01', 'campo_complemento02', 'campo_complemento03', 'campo_complemento04', 'campo_complemento05',
     'campo_complemento06', 'campo_complemento07', 'campo_complemento08', 'campo_complemento09', 'campo_complemento10',
