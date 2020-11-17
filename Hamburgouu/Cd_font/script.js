@@ -212,6 +212,7 @@ function salvar() {
                 campo_complemento.style.float = "left";
 
                 let complemento = window.document.getElementById(complemento_certo[i]);    // complemento
+                complemento.innerHTML = tomate + cebola + alface + milho + calabresa + completo;
 
                 complemento.style.float = "left";
                 complemento.style.width = "60%";
@@ -239,6 +240,9 @@ function salvar() {
                 botao.style.fontWeight = "Bold";
                 botao.style.marginLeft = "4%";
                 botao.style.marginTop = "0.5%";
+                botao.style.backgroundColor = "gray";
+                botao.style.borderRadius = "5%";
+                botao.style.boxShadow = "1px 1px 1px 1px black";
 
                 painel[i] = 1;
 
@@ -376,61 +380,74 @@ let click = ['bt01', 'bt02', 'bt03', 'bt04', 'bt05', 'bt06', 'bt07', 'bt08', 'bt
 //-----------------------------------------------------------------------------  configuração dos complementos
 
 let revesamentoComplemento = [0,0,0,0,0,0];
+    // variáveis de complemento
+let  tomate = "", cebola = "", alface = "", milho = "", calabresa = "", completo = "";
 
 function es01(){
-    if(revesamentoComplemento[0] == 0){
+    if(revesamentoComplemento[0] == 0){     // ref ao campo tomate 
         window.document.getElementById('es01').style.backgroundColor = "green";
         revesamentoComplemento[0] = 1;
+        tomate = "Tomate, ";
 
         revesamentoComplemento[5] = 0;
         document.getElementById('es06').style.backgroundColor = "transparent";
+        completo = "";
     }
 }
 
 function es02(){
-    if(revesamentoComplemento[1] == 0){
+    if(revesamentoComplemento[1] == 0){         // ref ao campo cebola 
         window.document.getElementById('es02').style.backgroundColor = "green";
         revesamentoComplemento[1] = 1;
+        cebola = "Cebola,";
 
         revesamentoComplemento[5] = 0;
         document.getElementById('es06').style.backgroundColor = "transparent";
+        completo = "";
     }
 }
 
 function es03(){
-    if(revesamentoComplemento[2] == 0){
+    if(revesamentoComplemento[2] == 0){        // ref ao campo alface
         window.document.getElementById('es03').style.backgroundColor = "green";
         revesamentoComplemento[2] = 1;
+        alface = "Alface, ";
 
         revesamentoComplemento[5] = 0;
         document.getElementById('es06').style.backgroundColor = "transparent";
+        completo = "";
     }
 }
 
 function es04(){
-    if(revesamentoComplemento[3] == 0){
+    if(revesamentoComplemento[3] == 0){         // ref ao campo milho
         window.document.getElementById('es04').style.backgroundColor = "green";
         revesamentoComplemento[3] = 1;
+        milho = "Milho, ";
 
         revesamentoComplemento[5] = 0;
         document.getElementById('es06').style.backgroundColor = "transparent";
+        completo = "";
     }
 }
 
 function es05(){
-    if(revesamentoComplemento[4] == 0){
+    if(revesamentoComplemento[4] == 0){        // ref ao campo calabresa 
         window.document.getElementById('es05').style.backgroundColor = "green";
         revesamentoComplemento[4] = 1;
+        calabresa = "Calabresa";
 
         revesamentoComplemento[5] = 0;
         document.getElementById('es06').style.backgroundColor = "transparent";
+        completo = "";
     }
 }
 
 function es06(){
-    if(revesamentoComplemento[5] == 0){
+    if(revesamentoComplemento[5] == 0){        // ref ao campo completo 
         window.document.getElementById('es06').style.backgroundColor = "green";
         revesamentoComplemento[5] = 1;
+        completo = "Completo";
         
         let grupo = ['es01','es02','es03','es04','es05'];
 
@@ -438,5 +455,8 @@ function es06(){
             revesamentoComplemento[i] = 0;
             document.getElementById(grupo[i]).style.backgroundColor = "transparent";
         }
+
+        tomate = ""; cebola = ""; alface = ""; milho = ""; calabresa = "";
+
     }
 }
