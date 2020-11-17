@@ -127,7 +127,6 @@ function salvar() {
                 let quant = window.document.getElementById(quant_hambur[i]);      // quantidade de hamburduer
                 let quant_pedido = window.document.getElementById('numero').value;
                 quant.innerHTML = quant_pedido + " Unidades";
-                soma.push(window.document.getElementById('numero').value);
 
                 quant.style.width = "20%";
                 quant.style.height = "20%";
@@ -374,4 +373,70 @@ let click = ['bt01', 'bt02', 'bt03', 'bt04', 'bt05', 'bt06', 'bt07', 'bt08', 'bt
     'bt21', 'bt22', 'bt23', 'bt24', 'bt25', 'bt26', 'bt27', 'bt28', 'bt29', 'bt30',
     'bt31', 'bt32', 'bt33', 'bt34', 'bt35', 'bt36', 'bt37', 'bt38', 'bt39', 'bt40'];
 
-let soma = []
+//-----------------------------------------------------------------------------  configuração dos complementos
+
+let revesamentoComplemento = [0,0,0,0,0,0];
+
+function es01(){
+    if(revesamentoComplemento[0] == 0){
+        window.document.getElementById('es01').style.backgroundColor = "green";
+        revesamentoComplemento[0] = 1;
+
+        revesamentoComplemento[5] = 0;
+        document.getElementById('es06').style.backgroundColor = "transparent";
+    }
+}
+
+function es02(){
+    if(revesamentoComplemento[1] == 0){
+        window.document.getElementById('es02').style.backgroundColor = "green";
+        revesamentoComplemento[1] = 1;
+
+        revesamentoComplemento[5] = 0;
+        document.getElementById('es06').style.backgroundColor = "transparent";
+    }
+}
+
+function es03(){
+    if(revesamentoComplemento[2] == 0){
+        window.document.getElementById('es03').style.backgroundColor = "green";
+        revesamentoComplemento[2] = 1;
+
+        revesamentoComplemento[5] = 0;
+        document.getElementById('es06').style.backgroundColor = "transparent";
+    }
+}
+
+function es04(){
+    if(revesamentoComplemento[3] == 0){
+        window.document.getElementById('es04').style.backgroundColor = "green";
+        revesamentoComplemento[3] = 1;
+
+        revesamentoComplemento[5] = 0;
+        document.getElementById('es06').style.backgroundColor = "transparent";
+    }
+}
+
+function es05(){
+    if(revesamentoComplemento[4] == 0){
+        window.document.getElementById('es05').style.backgroundColor = "green";
+        revesamentoComplemento[4] = 1;
+
+        revesamentoComplemento[5] = 0;
+        document.getElementById('es06').style.backgroundColor = "transparent";
+    }
+}
+
+function es06(){
+    if(revesamentoComplemento[5] == 0){
+        window.document.getElementById('es06').style.backgroundColor = "green";
+        revesamentoComplemento[5] = 1;
+        
+        let grupo = ['es01','es02','es03','es04','es05'];
+
+        for(let i= 0; i<5; i++){
+            revesamentoComplemento[i] = 0;
+            document.getElementById(grupo[i]).style.backgroundColor = "transparent";
+        }
+    }
+}
