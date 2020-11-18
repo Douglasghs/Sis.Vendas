@@ -99,6 +99,8 @@ function salvar() {
                 let lache = window.document.getElementById('campo_lache');
                 pedido_nome.innerHTML = lache.options[lache.selectedIndex].value;
 
+                verificador = lache.options[lache.selectedIndex].value;
+
                 pedido_nome.style.width = "40%";
                 pedido_nome.style.height = "20%";
                 pedido_nome.style.float = "left";
@@ -127,6 +129,8 @@ function salvar() {
                 let quant = window.document.getElementById(quant_hambur[i]);      // quantidade de hamburduer
                 let quant_pedido = window.document.getElementById('numero').value;
                 quant.innerHTML = quant_pedido + " Unidades";
+
+                soma_quant[i] = window.document.getElementById('numero').value;
 
                 quant.style.width = "20%";
                 quant.style.height = "20%";
@@ -225,7 +229,7 @@ function salvar() {
                 complemento.style.marginTop = "0.5%";
                 complemento.style.marginLeft = "0.5%";
 
-                
+
 
                 let botao = window.document.getElementById(click[i]);
 
@@ -243,6 +247,23 @@ function salvar() {
                 botao.style.backgroundColor = "gray";
                 botao.style.borderRadius = "5%";
                 botao.style.boxShadow = "1px 1px 1px 1px black";
+
+                /*
+                let grupo = ['es01','es02','es03','es04','es05','es06'];   // limpar campos após salvamento do pedido
+
+    for( let i=0; i<6;i++){
+        revesamentoComplemento[i] = 0;
+        window.document.getElementById(grupo[i]).style.backgroundColor = "transparent"
+    }
+
+    tomate = ""; cebola = ""; alface = ""; milho = ""; calabresa = ""; completo = "";  // fim da primeira instancia
+
+    let grupo_formulario = ['nome', 'endereco', 'compl_endereco', 'numero'];
+
+    for( let i=0; i<4; i++){
+        window.document.getElementById(grupo_formulario[i]).value = "";
+    }
+    */
 
                 painel[i] = 1;
 
@@ -346,13 +367,13 @@ let nome_compl_endereco = ['compl_endereco01', 'compl_endereco02', 'compl_endere
     'compl_endereco36', 'compl_endereco37', 'compl_endereco38', 'compl_endereco39', 'compl_endereco40']
 
 let c_compl_endereco = ['camp_compl_endereco01', 'camp_compl_endereco02', 'camp_compl_endereco03', 'camp_compl_endereco04', 'camp_compl_endereco05',
-    'camp_compl_endereco06','camp_compl_endereco07','camp_compl_endereco08','camp_compl_endereco09','camp_compl_endereco10',
-    'camp_compl_endereco11','camp_compl_endereco12','camp_compl_endereco13','camp_compl_endereco14','camp_compl_endereco15',
-    'camp_compl_endereco16','camp_compl_endereco17','camp_compl_endereco18','camp_compl_endereco19','camp_compl_endereco20',
-    'camp_compl_endereco21','camp_compl_endereco22','camp_compl_endereco23','camp_compl_endereco24','camp_compl_endereco25',
-    'camp_compl_endereco26','camp_compl_endereco27','camp_compl_endereco28','camp_compl_endereco29','camp_compl_endereco30',
-    'camp_compl_endereco31','camp_compl_endereco32','camp_compl_endereco33','camp_compl_endereco34','camp_compl_endereco35',
-    'camp_compl_endereco36','camp_compl_endereco37','camp_compl_endereco38','camp_compl_endereco39','camp_compl_endereco40']
+    'camp_compl_endereco06', 'camp_compl_endereco07', 'camp_compl_endereco08', 'camp_compl_endereco09', 'camp_compl_endereco10',
+    'camp_compl_endereco11', 'camp_compl_endereco12', 'camp_compl_endereco13', 'camp_compl_endereco14', 'camp_compl_endereco15',
+    'camp_compl_endereco16', 'camp_compl_endereco17', 'camp_compl_endereco18', 'camp_compl_endereco19', 'camp_compl_endereco20',
+    'camp_compl_endereco21', 'camp_compl_endereco22', 'camp_compl_endereco23', 'camp_compl_endereco24', 'camp_compl_endereco25',
+    'camp_compl_endereco26', 'camp_compl_endereco27', 'camp_compl_endereco28', 'camp_compl_endereco29', 'camp_compl_endereco30',
+    'camp_compl_endereco31', 'camp_compl_endereco32', 'camp_compl_endereco33', 'camp_compl_endereco34', 'camp_compl_endereco35',
+    'camp_compl_endereco36', 'camp_compl_endereco37', 'camp_compl_endereco38', 'camp_compl_endereco39', 'camp_compl_endereco40']
 
 let nome_complemento = ['campo_complemento01', 'campo_complemento02', 'campo_complemento03', 'campo_complemento04', 'campo_complemento05',
     'campo_complemento06', 'campo_complemento07', 'campo_complemento08', 'campo_complemento09', 'campo_complemento10',
@@ -379,12 +400,12 @@ let click = ['bt01', 'bt02', 'bt03', 'bt04', 'bt05', 'bt06', 'bt07', 'bt08', 'bt
 
 //-----------------------------------------------------------------------------  configuração dos complementos
 
-let revesamentoComplemento = [0,0,0,0,0,0];
-    // variáveis de complemento
-let  tomate = "", cebola = "", alface = "", milho = "", calabresa = "", completo = "";
+let revesamentoComplemento = [0, 0, 0, 0, 0, 0];
+// variáveis de complemento
+let tomate = "", cebola = "", alface = "", milho = "", calabresa = "", completo = "";
 
-function es01(){
-    if(revesamentoComplemento[0] == 0){     // ref ao campo tomate 
+function es01() {
+    if (revesamentoComplemento[0] == 0) {     // ref ao campo tomate 
         window.document.getElementById('es01').style.backgroundColor = "green";
         revesamentoComplemento[0] = 1;
         tomate = "Tomate, ";
@@ -395,8 +416,8 @@ function es01(){
     }
 }
 
-function es02(){
-    if(revesamentoComplemento[1] == 0){         // ref ao campo cebola 
+function es02() {
+    if (revesamentoComplemento[1] == 0) {         // ref ao campo cebola 
         window.document.getElementById('es02').style.backgroundColor = "green";
         revesamentoComplemento[1] = 1;
         cebola = "Cebola,";
@@ -407,8 +428,8 @@ function es02(){
     }
 }
 
-function es03(){
-    if(revesamentoComplemento[2] == 0){        // ref ao campo alface
+function es03() {
+    if (revesamentoComplemento[2] == 0) {        // ref ao campo alface
         window.document.getElementById('es03').style.backgroundColor = "green";
         revesamentoComplemento[2] = 1;
         alface = "Alface, ";
@@ -419,8 +440,8 @@ function es03(){
     }
 }
 
-function es04(){
-    if(revesamentoComplemento[3] == 0){         // ref ao campo milho
+function es04() {
+    if (revesamentoComplemento[3] == 0) {         // ref ao campo milho
         window.document.getElementById('es04').style.backgroundColor = "green";
         revesamentoComplemento[3] = 1;
         milho = "Milho, ";
@@ -431,8 +452,8 @@ function es04(){
     }
 }
 
-function es05(){
-    if(revesamentoComplemento[4] == 0){        // ref ao campo calabresa 
+function es05() {
+    if (revesamentoComplemento[4] == 0) {        // ref ao campo calabresa 
         window.document.getElementById('es05').style.backgroundColor = "green";
         revesamentoComplemento[4] = 1;
         calabresa = "Calabresa";
@@ -443,15 +464,15 @@ function es05(){
     }
 }
 
-function es06(){
-    if(revesamentoComplemento[5] == 0){        // ref ao campo completo 
+function es06() {
+    if (revesamentoComplemento[5] == 0) {        // ref ao campo completo 
         window.document.getElementById('es06').style.backgroundColor = "green";
         revesamentoComplemento[5] = 1;
         completo = "Completo";
-        
-        let grupo = ['es01','es02','es03','es04','es05'];
 
-        for(let i= 0; i<5; i++){
+        let grupo = ['es01', 'es02', 'es03', 'es04', 'es05'];
+
+        for (let i = 0; i < 5; i++) {
             revesamentoComplemento[i] = 0;
             document.getElementById(grupo[i]).style.backgroundColor = "transparent";
         }
@@ -463,11 +484,11 @@ function es06(){
 
 //-------------------------------------------------------------- função limpar todo os dados do formulário
 
-function Limpar(){
+function Limpar() {
 
-    let grupo = ['es01','es02','es03','es04','es05','es06'];   // inicio da primeira instancia
+    let grupo = ['es01', 'es02', 'es03', 'es04', 'es05', 'es06'];   // inicio da primeira instancia
 
-    for( let i=0; i<6;i++){
+    for (let i = 0; i < 6; i++) {
         revesamentoComplemento[i] = 0;
         window.document.getElementById(grupo[i]).style.backgroundColor = "transparent"
     }
@@ -476,7 +497,93 @@ function Limpar(){
 
     let grupo_formulario = ['nome', 'endereco', 'compl_endereco', 'numero'];
 
-    for( let i=0; i<4; i++){
+    for (let i = 0; i < 4; i++) {
         window.document.getElementById(grupo_formulario[i]).value = "";
     }
+}
+
+//---------------------------------------------------------- funções retirar pedido da fila de pedido
+
+let valores_quant = 0; 
+let soma_quant = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+let valores_lucro = 0, verificador;
+let soma_lucro = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+function bt01(){
+    window.document.getElementById(campo_geral[0]).style.display = "none";  // adiconando ao campo de vendidos
+    painel[0] = 0;
+
+    valores_quant = parseInt(valores_quant) + parseInt(soma_quant[0]); 
+    document.getElementById('vendidos').value = valores_quant;
+
+    
+    if(verificador == "Pechincheiro Burguer"){             // adicionando ao campo de lucro
+        soma_lucro[0] = 5;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]); 
+    }
+    else if(verificador == "Lagilina Burguer"){
+        soma_lucro[0] = 7;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]); 
+    }
+    else if(verificador == "Narizinho Burguer"){
+        soma_lucro[0] = 10;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]);
+    }
+    else if(verificador == "Bucho Burguer"){
+        soma_lucro[0] = 13;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]);
+    }
+    else if(verificador == "Fofão Burguer"){
+        soma_lucro[0] = 15;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]);
+    }
+    else if(verificador == "Meu Beiço Burguer"){
+        soma_lucro[0] = 17;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]);
+    } 
+    else if(verificador == "Explosão"){
+        soma_lucro[0] = 30;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]);
+    }
+    document.getElementById('lucro').value = valores_lucro + " R$";
+}
+
+function bt02(){
+    window.document.getElementById(campo_geral[1]).style.display = "none";  // adiconando ao campo de vendidos
+    painel[1] = 0;
+
+    valores_quant = parseInt(valores_quant) + parseInt(soma_quant[1]); 
+    document.getElementById('vendidos').value = valores_quant;
+
+    
+    if(verificador == "Pechincheiro Burguer"){             // adicionando ao campo de lucro
+        soma_lucro[1] = 5;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]); 
+    }
+    else if(verificador == "Lagilina Burguer"){
+        soma_lucro[1] = 7;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]); 
+    }
+    else if(verificador == "Narizinho Burguer"){
+        soma_lucro[1] = 10;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]);
+    }
+    else if(verificador == "Bucho Burguer"){
+        soma_lucro[1] = 13;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]);
+    }
+    else if(verificador == "Fofão Burguer"){
+        soma_lucro[1] = 15;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]);
+    }
+    else if(verificador == "Meu Beiço Burguer"){
+        soma_lucro[1] = 17;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]);
+    } 
+    else if(verificador == "Explosão"){
+        soma_lucro[1] = 30;
+        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]);
+    }
+    document.getElementById('lucro').value = valores_lucro + " R$";
 }
