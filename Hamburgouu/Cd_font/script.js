@@ -99,7 +99,7 @@ function salvar() {
                 let lache = window.document.getElementById('campo_lache');
                 pedido_nome.innerHTML = lache.options[lache.selectedIndex].value;
 
-                verificador = lache.options[lache.selectedIndex].value;
+                verificador[i] = lache.options[lache.selectedIndex].value;
 
                 pedido_nome.style.width = "40%";
                 pedido_nome.style.height = "20%";
@@ -504,86 +504,58 @@ function Limpar() {
 
 //---------------------------------------------------------- funções retirar pedido da fila de pedido
 
-let valores_quant = 0; 
-let soma_quant = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+let troca = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let valores_quant = 0;
+let soma_quant = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-let valores_lucro = 0, verificador;
-let soma_lucro = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+let valores_lucro = 0;
+let soma_lucro = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let verificador = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-function bt01(){
-    window.document.getElementById(campo_geral[0]).style.display = "none";  // adiconando ao campo de vendidos
-    painel[0] = 0;
+function bt01() {
 
-    valores_quant = parseInt(valores_quant) + parseInt(soma_quant[0]); 
-    document.getElementById('vendidos').value = valores_quant;
+    for (let i = 0; i < 40; i++) {
+        if (troca[i] == 0) {
 
-    
-    if(verificador == "Pechincheiro Burguer"){             // adicionando ao campo de lucro
-        soma_lucro[0] = 5;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]); 
-    }
-    else if(verificador == "Lagilina Burguer"){
-        soma_lucro[0] = 7;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]); 
-    }
-    else if(verificador == "Narizinho Burguer"){
-        soma_lucro[0] = 10;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]);
-    }
-    else if(verificador == "Bucho Burguer"){
-        soma_lucro[0] = 13;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]);
-    }
-    else if(verificador == "Fofão Burguer"){
-        soma_lucro[0] = 15;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]);
-    }
-    else if(verificador == "Meu Beiço Burguer"){
-        soma_lucro[0] = 17;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]);
-    } 
-    else if(verificador == "Explosão"){
-        soma_lucro[0] = 30;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[0] * soma_quant[0]);
-    }
-    document.getElementById('lucro').value = valores_lucro + " R$";
-}
+            window.document.getElementById(campo_geral[i]).style.display = "none";  // adiconando ao campo de vendidos
+            painel[i] = 0;
 
-function bt02(){
-    window.document.getElementById(campo_geral[1]).style.display = "none";  // adiconando ao campo de vendidos
-    painel[1] = 0;
+            valores_quant = parseInt(valores_quant) + parseInt(soma_quant[i]);
+            document.getElementById('vendidos').value = valores_quant;
 
-    valores_quant = parseInt(valores_quant) + parseInt(soma_quant[1]); 
-    document.getElementById('vendidos').value = valores_quant;
+            if (verificador[i] == "Pechincheiro Burguer") {             // adicionando ao campo de lucro
+                soma_lucro[i] = 5;
+                valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[i] * soma_quant[i]);
+            }
+            else if (verificador[i] == "Lagilina Burguer") {
+                soma_lucro[i] = 7;
+                valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[i] * soma_quant[i]);
+            }
+            else if (verificador[i] == "Narizinho Burguer") {
+                soma_lucro[i] = 10;
+                valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[i] * soma_quant[i]);
+            }
+            else if (verificador[i] == "Bucho Burguer") {
+                soma_lucro[i] = 13;
+                valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[i] * soma_quant[i]);
+            }
+            else if (verificador[i] == "Fofão Burguer") {
+                soma_lucro[i] = 15;
+                valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[i] * soma_quant[i]);
+            }
+            else if (verificador[i] == "Meu Beiço Burguer") {
+                soma_lucro[i] = 17;
+                valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[i] * soma_quant[i]);
+            }
+            else if (verificador[i] == "Explosão") {
+                soma_lucro[i] = 30;
+                valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[i] * soma_quant[i]);
+            }
+            document.getElementById('lucro').value = valores_lucro + " R$";
 
-    
-    if(verificador == "Pechincheiro Burguer"){             // adicionando ao campo de lucro
-        soma_lucro[1] = 5;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]); 
+            troca[i] = 1;
+
+            break;
+        }
     }
-    else if(verificador == "Lagilina Burguer"){
-        soma_lucro[1] = 7;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]); 
-    }
-    else if(verificador == "Narizinho Burguer"){
-        soma_lucro[1] = 10;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]);
-    }
-    else if(verificador == "Bucho Burguer"){
-        soma_lucro[1] = 13;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]);
-    }
-    else if(verificador == "Fofão Burguer"){
-        soma_lucro[1] = 15;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]);
-    }
-    else if(verificador == "Meu Beiço Burguer"){
-        soma_lucro[1] = 17;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]);
-    } 
-    else if(verificador == "Explosão"){
-        soma_lucro[1] = 30;
-        valores_lucro = parseInt(valores_lucro) + parseInt(soma_lucro[1] * soma_quant[1]);
-    }
-    document.getElementById('lucro').value = valores_lucro + " R$";
 }
