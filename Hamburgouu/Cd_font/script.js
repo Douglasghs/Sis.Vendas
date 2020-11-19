@@ -1,14 +1,15 @@
 
+const Post = require('../modules/Post');
 // -----------------------------------------------------------------------------------   Definindo data e hora 
 
-function Data_hora() {
+/*function Data_hora() {
     window.document.getElementById('tempo_hora').innerHTML = new Date().getHours() + ":" + new Date().getMinutes() + ":" +
         new Date().getSeconds();
 
     window.document.getElementById('tempo_data').innerHTML = new Date().getDate() + "/" + (new Date().getMonth() + 1) + "/" +
         new Date().getFullYear();
 }
-setInterval(Data_hora, 1000);
+setInterval(Data_hora, 1000); */
 
 // ------------------------------------------------------------------------------ enlace da fila de pedido
 function salvar() {
