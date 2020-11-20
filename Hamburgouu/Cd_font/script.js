@@ -1,5 +1,3 @@
-
-const Post = require('../modules/Post');
 // -----------------------------------------------------------------------------------   Definindo data e hora 
 
 /*function Data_hora() {
@@ -267,6 +265,7 @@ function salvar() {
     */
 
                 painel[i] = 1;
+                troca[i] = 0;
 
                 break;
             }
