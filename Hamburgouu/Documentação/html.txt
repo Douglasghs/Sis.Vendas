@@ -1,8 +1,0 @@
--- <!-- Documentação\html\ ref--001 -->
-                              Referente ao campo superior do layout
-
--- <!-- Documentação\html\ ref--002 -->
-                              Referente ao campo esquerdo do layout principal
-
--- <!-- Documentação\html\ ref--003 -->
-                              Referente ao campo direito do layout principal
