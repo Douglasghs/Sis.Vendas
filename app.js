@@ -11,5 +11,7 @@ const path = require("path");
           res.render('formulario')
       })
 
-    // config body-parser
+    // config path
        app.use(express.static(path.join(__dirname, "public")))
+
+module.exports = app;
