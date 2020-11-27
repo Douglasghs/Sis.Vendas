@@ -2,7 +2,7 @@ const bd = require("./bd");
 
 const Post = bd.Sequelize.define('pedidos',{
     nome_cliente: {
-        type: bd.sequelize.STRING
+        type: bd.sequelize.STRING 
     } ,
     endereco : {
         type: bd.sequelize.STRING

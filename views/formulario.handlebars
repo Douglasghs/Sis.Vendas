@@ -1,4 +1,4 @@
-<form action="">
+<form action="/" method="POST">
     <div id="Campo_superior">
         <!-- Documentação\html\ ref 001 -->
         <input type="text" class="campo_valor" readonly=true id="vendidos">
@@ -18,7 +18,7 @@
     </div>
     <div class="temp_gerais">
         <!-- Documentação\html\ ref 002 -->
-        <select name="lanches" id="campo_lache">
+        <select name="lanches" id="campo_lache" name="lanches">
             <option value="Pechincheiro Burguer"><strong>PECHINCHEIRO BURGUER - 5 R$ -</strong></option>
             <option value="Lagilina Burguer"><strong>LAGILINA BURGUER - 7 R$ -</strong></option>
             <option value="Narizinho Burguer"><strong>NARIZINHO BURGUER - 10 R$ -</strong></option>
@@ -55,23 +55,23 @@
 
         <div class="campo_nome">
             <div class="divi_nome_g"><strong>Cliente:</strong></div>
-            <input type="text" class="imputavel" placeholder="Nome do cliente aqui ..." id="nome">
+            <input type="text" class="imputavel" placeholder="Nome do cliente aqui ..." id="nome" name="cliente">
         </div>
         <div class="campo_nome">
             <div class="divi_nome_g">Endereço:</div>
-            <input type="text" class="imputavel" placeholder="Endereço do cliente aqui ..." id="endereco">
+            <input type="text" class="imputavel" placeholder="Endereço do cliente aqui ..." id="endereco" name="endereço">
         </div>
         <div class="campo_nome">
             <div class="divi_nome_g">Com.Endereço:</div>
-            <input type="text" placeholder="ex.: casa, prédio ou número  ..." id="compl_endereco">
+            <input type="text" placeholder="ex.: casa, prédio ou número  ..." id="compl_endereco" name="com_endereco">
         </div>
         <div id="quantidade">
             <div id="quant_nome"><strong>Quantidade:</strong></div>
-            <input type="number" id="numero" placeholder="Nº.quantidade">
+            <input type="number" id="numero" placeholder="Nº.quantidade" name="quantidade">
         </div>
 
         <div id="botao">
-            <button type="button" class="Carac_bts" onclick="salvar()"><strong>Salvar pedido</strong></button>
+            <button type="submit" class="Carac_bts" onclick="salvar()"><strong>Salvar pedido</strong></button>
             <button type="button" class="Carac_bts" onclick="Limpar()"><strong>Limpar Campos</strong></button>
         </div>
     </div>
@@ -94,7 +94,7 @@
             <div id="campo_complemento01"></div>
             <div id="complemento01"></div>
 
-            <button type="button" id="bt01" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt01" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere02">
             <div id="nome02"></div>
@@ -112,7 +112,7 @@
             <div id="campo_complemento02"></div>
             <div id="complemento02"></div>
 
-            <button type="button" id="bt02" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt02" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere03">
             <div id="nome03"></div>
@@ -130,7 +130,7 @@
             <div id="campo_complemento03"></div>
             <div id="complemento03"></div>
 
-            <button type="button" id="bt03" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt03" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere04">
             <div id="nome04"></div>
@@ -148,7 +148,7 @@
             <div id="campo_complemento04"></div>
             <div id="complemento04"></div>
 
-            <button type="button" id="bt04" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt04" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere05">
             <div id="nome05"></div>
@@ -166,7 +166,7 @@
             <div id="campo_complemento05"></div>
             <div id="complemento05"></div>
 
-            <button type="button" id="bt05" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt05" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere06">
             <div id="nome06"></div>
@@ -184,7 +184,7 @@
             <div id="campo_complemento06"></div>
             <div id="complemento06"></div>
 
-            <button type="button" id="bt06" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt06" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere07">
             <div id="nome07"></div>
@@ -202,7 +202,7 @@
             <div id="campo_complemento07"></div>
             <div id="complemento07"></div>
 
-            <button type="button" id="bt07" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt07" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere08">
             <div id="nome08"></div>
@@ -220,7 +220,7 @@
             <div id="campo_complemento08"></div>
             <div id="complemento08"></div>
 
-            <button type="button" id="bt08" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt08" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere09">
             <div id="nome09"></div>
@@ -238,7 +238,7 @@
             <div id="campo_complemento09"></div>
             <div id="complemento09"></div>
 
-            <button type="button" id="bt09" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt09" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere10">
             <div id="nome10"></div>
@@ -256,7 +256,7 @@
             <div id="campo_complemento10"></div>
             <div id="complemento10"></div>
 
-            <button type="button" id="bt10" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt10" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere11">
             <div id="nome11"></div>
@@ -274,7 +274,7 @@
             <div id="campo_complemento11"></div>
             <div id="complemento11"></div>
 
-            <button type="button" id="bt11" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt11" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere12">
             <div id="nome12"></div>
@@ -292,7 +292,7 @@
             <div id="campo_complemento12"></div>
             <div id="complemento12"></div>
 
-            <button type="button" id="bt12" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt12" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere13">
             <div id="nome13"></div>
@@ -310,7 +310,7 @@
             <div id="campo_complemento13"></div>
             <div id="complemento13"></div>
 
-            <button type="button" id="bt13" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt13" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere14">
             <div id="nome14"></div>
@@ -328,7 +328,7 @@
             <div id="campo_complemento14"></div>
             <div id="complemento14"></div>
 
-            <button type="button" id="bt14" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt14" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere15">
             <div id="nome15"></div>
@@ -346,7 +346,7 @@
             <div id="campo_complemento15"></div>
             <div id="complemento15"></div>
 
-            <button type="button" id="bt15" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt15" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere16">
             <div id="nome16"></div>
@@ -364,7 +364,7 @@
             <div id="campo_complemento16"></div>
             <div id="complemento16"></div>
 
-            <button type="button" id="bt16" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt16" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere17">
@@ -383,7 +383,7 @@
             <div id="campo_complemento17"></div>
             <div id="complemento17"></div>
 
-            <button type="button" id="bt17" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt17" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere18">
@@ -402,7 +402,7 @@
             <div id="campo_complemento18"></div>
             <div id="complemento18"></div>
 
-            <button type="button" id="bt18" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt18" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere19">
@@ -421,7 +421,7 @@
             <div id="campo_complemento19"></div>
             <div id="complemento19"></div>
 
-            <button type="button" id="bt19" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt19" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere20">
@@ -440,7 +440,7 @@
             <div id="campo_complemento20"></div>
             <div id="complemento20"></div>
 
-            <button type="button" id="bt20" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt20" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere21">
@@ -459,7 +459,7 @@
             <div id="campo_complemento21"></div>
             <div id="complemento21"></div>
 
-            <button type="button" id="bt21" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt21" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere22">
@@ -478,7 +478,7 @@
             <div id="campo_complemento22"></div>
             <div id="complemento22"></div>
 
-            <button type="button" id="bt22" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt22" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere23">
@@ -497,7 +497,7 @@
             <div id="campo_complemento23"></div>
             <div id="complemento23"></div>
 
-            <button type="button" id="bt23" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt23" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere24">
@@ -516,7 +516,7 @@
             <div id="campo_complemento24"></div>
             <div id="complemento24"></div>
 
-            <button type="button" id="bt24" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt24" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere25">
@@ -535,7 +535,7 @@
             <div id="campo_complemento25"></div>
             <div id="complemento25"></div>
 
-            <button type="button" id="bt25" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt25" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere26">
@@ -554,7 +554,7 @@
             <div id="campo_complemento26"></div>
             <div id="complemento26"></div>
 
-            <button type="button" id="bt26" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt26" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere27">
@@ -573,7 +573,7 @@
             <div id="campo_complemento27"></div>
             <div id="complemento27"></div>
 
-            <button type="button" id="bt27" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt27" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere28">
@@ -592,7 +592,7 @@
             <div id="campo_complemento28"></div>
             <div id="complemento28"></div>
 
-            <button type="button" id="bt28" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt28" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere29">
@@ -611,7 +611,7 @@
             <div id="campo_complemento29"></div>
             <div id="complemento29"></div>
 
-            <button type="button" id="bt29" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt29" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere30">
@@ -630,7 +630,7 @@
             <div id="campo_complemento30"></div>
             <div id="complemento30"></div>
 
-            <button type="button" id="bt30" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt30" onclick="Bt01()" class="grere"></button>
 
         </div>
         <div id="grere31">
@@ -649,7 +649,7 @@
             <div id="campo_complemento31"></div>
             <div id="complemento31"></div>
 
-            <button type="button" id="bt31" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt31" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere32">
             <div id="nome32"></div>
@@ -667,7 +667,7 @@
             <div id="campo_complemento32"></div>
             <div id="complemento32"></div>
 
-            <button type="button" id="bt32" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt32" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere33">
             <div id="nome33"></div>
@@ -685,7 +685,7 @@
             <div id="campo_complemento33"></div>
             <div id="complemento33"></div>
 
-            <button type="button" id="bt33" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt33" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere34">
             <div id="nome34"></div>
@@ -703,7 +703,7 @@
             <div id="campo_complemento34"></div>
             <div id="complemento34"></div>
 
-            <button type="button" id="bt34" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt34" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere35">
             <div id="nome35"></div>
@@ -721,7 +721,7 @@
             <div id="campo_complemento35"></div>
             <div id="complemento35"></div>
 
-            <button type="button" id="bt35" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt35" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere36">
             <div id="nome36"></div>
@@ -739,7 +739,7 @@
             <div id="campo_complemento36"></div>
             <div id="complemento36"></div>
 
-            <button type="button" id="bt36" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt36" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere37">
             <div id="nome37"></div>
@@ -757,7 +757,7 @@
             <div id="campo_complemento37"></div>
             <div id="complemento37"></div>
 
-            <button type="button" id="bt37" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt37" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere38">
             <div id="nome38"></div>
@@ -775,7 +775,7 @@
             <div id="campo_complemento38"></div>
             <div id="complemento38"></div>
 
-            <button type="button" id="bt38" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt38" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere39">
             <div id="nome39"></div>
@@ -793,7 +793,7 @@
             <div id="campo_complemento39"></div>
             <div id="complemento39"></div>
 
-            <button type="button" id="bt39" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt39" onclick="Bt01()" class="grere"></button>
         </div>
         <div id="grere40">
             <div id="nome40"></div>
@@ -811,7 +811,7 @@
             <div id="campo_complemento40"></div>
             <div id="complemento40"></div>
 
-            <button type="button" id="bt40" onclick="bt01()" class="grere"></button>
+            <button type="button" id="bt40" onclick="Bt01()" class="grere"></button>
         </div>
 
     </div>
