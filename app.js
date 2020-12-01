@@ -14,6 +14,10 @@ const body_parser = require("body-parser");
       app.get("/", function(req,res){
           res.render('formulario')
       })
+      app.get("/relatorio", function(req,res){
+          res.render('relatorio')
+      })
+
     // config body-parse
     app.use(body_parser.urlencoded({extended: false}))
     app.use(body_parser.json())

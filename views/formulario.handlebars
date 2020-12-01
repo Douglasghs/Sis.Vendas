@@ -1,4 +1,5 @@
-<form action="/" method="POST">
+<div style="width: 100%;height: 609px;">
+    <form action="/" method="POST">
     <div id="Campo_superior">
         <!-- Documentação\html\ ref 001 -->
         <input type="text" class="campo_valor" readonly=true id="vendidos">
@@ -73,6 +74,9 @@
         <div id="botao">
             <button type="submit" class="Carac_bts" onclick="salvar()"><strong>Salvar pedido</strong></button>
             <button type="button" class="Carac_bts" onclick="Limpar()"><strong>Limpar Campos</strong></button>
+            <a href="/relatorio" target="_blank">
+                <button type="button"  class="Carac_bts" onclick="Relatorio()"><strong>Relatório</strong></button>
+            </a>
         </div>
     </div>
 
@@ -816,3 +820,4 @@
 
     </div>
 </form>
+</div>
