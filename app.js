@@ -8,14 +8,22 @@ const body_parser = require("body-parser");
 
 
 // config handlebars
-  app.engine('handlebars', handlebars({defaultLayout: 'main'}))
+  app.engine('handlebars', handlebars({
+    defaultLayout: 'main',
+    runtimeOptions: {
+      allowProtoPropertiesByDefault: true,
+      allowProtoMethodsByDefault: true,
+  },
+  }))
   app.set('view engine', 'handlebars')
     //renderizando o handlebars
       app.get("/", function(req,res){
           res.render('formulario')
       })
       app.get("/relatorio", function(req,res){
-          res.render('relatorio')
+       Post.findAll().then(function(posts){
+         res.render('relatorio', {posts: posts})
+       })
       })
 
     // config body-parse

@@ -91,7 +91,7 @@ body{
     float: left;
     width: 49.8%;
     height: 560px;
-    border: 1px solid rgba(0, 0, 0, 0.87);
+    border: 1px solid transparent;
 }
 
 .Bt_complementos{                                                    /* Documenta��o/css.txt/ ref-003*/                           
