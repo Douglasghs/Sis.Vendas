@@ -7,7 +7,7 @@ function Data_hora() {
     window.document.getElementById('tempo_data').innerHTML = new Date().getDate() + "/" + (new Date().getMonth() + 1) + "/" +
         new Date().getFullYear();
 }
-setInterval(Data_hora, 1000); 
+setInterval(Data_hora, 1000);
 
 // ------------------------------------------------------------------------------ enlace da fila de pedido
 function salvar() {
@@ -246,23 +246,8 @@ function salvar() {
                 botao.style.backgroundColor = "gray";
                 botao.style.borderRadius = "5%";
                 botao.style.boxShadow = "1px 1px 1px 1px black";
-
                 
-                let grupo = ['es01','es02','es03','es04','es05','es06'];   // limpar campos após salvamento do pedido
-
-    for( let i=0; i<6;i++){
-        revesamentoComplemento[i] = 0;
-        window.document.getElementById(grupo[i]).style.backgroundColor = "transparent"
-    }
-
-    tomate = ""; cebola = ""; alface = ""; milho = ""; calabresa = ""; completo = "";  // fim da primeira instancia
-
-    let grupo_formulario = ['nome', 'endereco', 'compl_endereco', 'numero'];
-
-    for( let i=0; i<4; i++){
-        window.document.getElementById(grupo_formulario[i]).value = "";
-    }
-    
+                atualiza()
 
                 painel[i] = 1;
                 troca[i] = 0;
@@ -500,7 +485,14 @@ function Limpar() {
     for (let i = 0; i < 4; i++) {
         window.document.getElementById(grupo_formulario[i]).value = "";
     }
+
 }
+
+function atualiza(){
+    setTimeout(Limpar, 1000)
+}
+
+
 
 //---------------------------------------------------------- funções retirar pedido da fila de pedido
 let troca = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
