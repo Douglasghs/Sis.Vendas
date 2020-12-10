@@ -1,7 +1,7 @@
 const bd = require("./bd");
 
-const Post = bd.Sequelize.define('pedidos',{
-    nome_cliente: {
+const Post = bd.Sequelize.define('pedidos',{    // Criando a tabela no banco de dados pelo código   
+    nome_cliente: {                             // Informações sobre o banco só acessando o mesmo 
         type: bd.sequelize.STRING 
     } ,
     endereco : {
@@ -18,9 +18,17 @@ const Post = bd.Sequelize.define('pedidos',{
     },
     compelento_lanche: {
         type: bd.sequelize.STRING
+    },
+    hanburgues: {
+        type: bd.sequelize.STRING
+    },
+    lucro: {
+        type: bd.sequelize.STRING
     }
 }) 
 
-//Post.sync({force: true});
-
+//Post.sync({force: true});               // Se vc quiser ta um reflash na tabela do banco, siga os passos
+                                          // - Retire os comentário da linha 
+                                          // - Renicie o servidor e depois coloque novamente o comentário 
+                                          // Se depois não colocar o comentário, a tabela vai ficar dando reflash direto 
 module.exports = Post;
