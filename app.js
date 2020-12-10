@@ -40,6 +40,7 @@ const body_parser = require("body-parser");
         endereco : req.body.endereço,
         comple_endereco : req.body.com_endereco,
         quantidade: req.body.quantidade,
+        lanche: req.body.lanches,
       })
     })
 module.exports = app;

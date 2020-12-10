@@ -15,15 +15,6 @@ const Post = bd.Sequelize.define('pedidos',{    // Criando a tabela no banco de 
     },
     lanche : {
         type: bd.sequelize.STRING
-    },
-    compelento_lanche: {
-        type: bd.sequelize.STRING
-    },
-    hanburgues: {
-        type: bd.sequelize.STRING
-    },
-    lucro: {
-        type: bd.sequelize.STRING
     }
 }) 
 

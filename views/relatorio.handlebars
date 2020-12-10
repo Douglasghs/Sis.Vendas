@@ -2,12 +2,21 @@
   <form action="/" method="POST">
 
     {{#each  posts}}
-
-    <h3>{{nome_cliente}}</h3>
-    <h4>{{endereco}}</h4>
-    <h4>{{comple_endereco}}</h4>
-    <h4>{{quantidade}}</h4>
-
+    
+    <p class="motra_banco2">{{id}}</p>
+    <p class="mostra_rela"><strong>Cliente:</strong></p>
+    <p class="motra_banco">{{nome_cliente}}</p>
+    <p class="mostra_rela"><strong>Endereço:</strong></p>
+    <p class="motra_banco">{{endereco}}</p>
+    <p class="mostra_rela"><strong>Comp.Endereço:</strong></p>
+    <p class="motra_banco">{{comple_endereco}}</p>
+    <p class="mostra_rela"><strong>Quantidade:</strong></p>
+    <p class="motra_banco">{{quantidade }}</p>
+    <p class="mostra_rela"><strong>Lanche:</strong></p>
+    <p class="motra_banco">{{lanche}}</p>
+ 
     {{/each}}
   </form>
-</div>
+</div>                       <!--  Esse arquivo puxa a relação de dados que tem no banco de dados
+                                   e mostrar na referencia de url ("relatorio") todos esses dados em ordem
+                              -->
